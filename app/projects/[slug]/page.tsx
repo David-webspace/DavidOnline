@@ -33,7 +33,11 @@ const projects = [
   },
 ];
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+type PageProps = {
+  params: { slug: string };
+};
+
+export default function ProjectPage({ params }: PageProps) {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return notFound();
 
