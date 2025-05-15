@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 
 // Example static data for demonstration
-const projects = [
+const projects: { slug: string; title: string; image: string; tags: string[]; description: string; }[] = [
   {
     slug: "mun-society-website",
     title: "MUN Society Website",
@@ -32,6 +32,8 @@ const projects = [
     description: "Portfolio and ecommerce site for Europa, showcasing products and design skills.",
   },
 ];
+
+export const dynamicParams = false;
 
 // Trivial change: force fresh build
 
