@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 
 // Example static data for demonstration
-const projects: { slug: string; title: string; image: string; tags: string[]; description: string; }[] = [
+const projects: { slug: string; title: string; image: string; tags: string[]; description: string }[] = [
   {
     slug: "mun-society-website",
     title: "MUN Society Website",
@@ -35,13 +35,17 @@ const projects: { slug: string; title: string; image: string; tags: string[]; de
 
 export const dynamicParams = false;
 
-// Trivial change: force fresh build
-
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+interface ProjectPageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function ProjectPage({ params }: ProjectPageProps) {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return notFound();
 
@@ -50,10 +54,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
       <div className="flex gap-2 mb-4">
         {project.tags.map((tag) => (
-          <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
+          <span
+            key={tag}
+            className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold"
+          >
+            {tag}
+          </span>
         ))}
       </div>
-      <Image src={project.image} alt={project.title} width={600} height={360} className="rounded-xl w-full h-72 object-cover mb-6" />
+      <Image
+        src={project.image}
+        alt={project.title}
+        width={600}
+        height={360}
+        className="rounded-xl w-full h-72 object-cover mb-6"
+      />
       <p className="text-lg text-gray-700">{project.description}</p>
     </div>
   );
