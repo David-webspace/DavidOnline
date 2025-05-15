@@ -55,7 +55,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <p className="text-gray-600 mb-6">I am Cheng-Hsu Pan, a graduate of the Bachelor Program in Interdisciplinary Studies at National Yang Ming Chiao Tung University, majoring in Innovative Technology and Interdisciplinary Design. During my studies, I explored various disciplines, including electrical engineering, interdisciplinary design, and front-end web development. My coursework encompassed subjects such as electronics, circuit theory, logic design, signals and systems, architectural design, 3D modeling, and parametric design. I was also honored to represent my program as the student speaker at the 2024 commencement ceremony.</p>
           <p className="text-gray-600 mb-6">I am passionate about learning and embracing new challenges, and I have gained valuable internship experience throughout my academic journey. At Chi策 Intelligent Cloud and QNAP Systems, Inc., I served as a UI/UX user experience intern. During my internship at Chi策 Intelligent Cloud, I designed two website interfaces, including a user backend post management system and a dashboard interface. I also conducted competitive analysis to enhance consistency in product design. At QNAP, I introduced a product satisfaction survey workflow, redefined Jira processes, and significantly improved the efficiency of satisfaction data utilization in product development. Additionally, I completed multiple UI designs, product redesign proposals, and provided recommendations for a digital transformation platform.</p>
-          <p className="text-gray-600 mb-6">Beyond my internships, I actively participated in competitions and extracurricular activities. I proposed an innovative solution combining customized medical seating with digital manufacturing technologies in the University Entrepreneurship Simulation Competition, earning a commendation award. As the Chief Technology Officer at the Taiwan Model United Nations Association, I successfully established the association's official website and collaborated with Harvard University to organize an international conference.</p>
+          <p className="text-gray-600 mb-6">Beyond my internships, I actively participated in competitions and extracurricular activities. I proposed an innovative solution combining customized medical seating with digital manufacturing technologies in the University Entrepreneurship Simulation Competition, earning a commendation award. As the Chief Technology Officer at the Taiwan Model United Nations Association, I successfully established the association&#39;s official website and collaborated with Harvard University to organize an international conference.</p>
           <p className="text-gray-600 mb-6">These experiences have strengthened my belief that continuous learning and practical application enable me to create more value for both my team and myself. I look forward to leveraging my skills in diverse fields and continuing to grow in the future.</p>
         </div>
       </section>
@@ -135,7 +135,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/graduation.jpg" alt="Update 1" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">Graduation Presentation</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is set to release her highly anticipated tenth studio album, The Right Person Will Stay, on May 21, 2025. This album marks a significant shift towards country and Americana genres, showcasing Lana's versatility and artistic evolution...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is set to release her highly anticipated tenth studio album, The Right Person Will Stay, on May 21, 2025. This album marks a significant shift towards country and Americana genres, showcasing Lana&#39;s versatility and artistic evolution...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/bluegear.png" alt="Update 2" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">BlueGear 2023</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey announces her 2025 UK and Ireland tour dates, with shows in London, Manchester, Dublin, and more. Tickets go on sale soon. Don't miss out on this unforgettable experience...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey announces her 2025 UK and Ireland tour dates, with shows in London, Manchester, Dublin, and more. Tickets go on sale soon. Don&#39;t miss out on this unforgettable experience...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/BAT2022.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">BAT 2022</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world's biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -162,7 +162,7 @@ export default function AboutPage() {
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/nccu_golden.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">NCCU Golden Melody Awards 2023</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world's biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/fox.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">Meichu 2023</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world's biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/updates/update3.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">2025 COACHELLA</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world's biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
