@@ -194,7 +194,7 @@ const BlogSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Main Blog Card */}
             <div className="md:col-span-2 bg-gray-50 rounded-2xl p-0 shadow-sm overflow-hidden flex flex-col md:flex-row">
-              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Main Blog" className="w-full md:w-2/3 h-60 md:h-auto object-cover" />
+              <Image src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Main Blog" className="w-full md:w-2/3 h-60 md:h-auto object-cover" />
               <div className="flex flex-col justify-between p-6 flex-1">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">RUNNING</span>
@@ -211,7 +211,7 @@ const BlogSection = () => {
             <div className="flex flex-col gap-4">
               {/* Blog Item 1 */}
               <div className="bg-gray-50 rounded-2xl flex gap-4 p-3 shadow-sm hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=100&q=80" alt="Blog 1" className="w-20 h-20 object-cover rounded-xl" />
+                <Image src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=100&q=80" alt="Blog 1" className="w-20 h-20 object-cover rounded-xl" />
                 <div className="flex flex-col justify-between flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold">RACE</span>
@@ -226,7 +226,7 @@ const BlogSection = () => {
               </div>
               {/* Blog Item 2 */}
               <div className="bg-gray-50 rounded-2xl flex gap-4 p-3 shadow-sm hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=100&q=80" alt="Blog 2" className="w-20 h-20 object-cover rounded-xl" />
+                <Image src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=100&q=80" alt="Blog 2" className="w-20 h-20 object-cover rounded-xl" />
                 <div className="flex flex-col justify-between flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold">RUNNING</span>
@@ -241,7 +241,7 @@ const BlogSection = () => {
               </div>
               {/* Blog Item 3 */}
               <div className="bg-gray-50 rounded-2xl flex gap-4 p-3 shadow-sm hover:shadow-md transition">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=100&q=80" alt="Blog 3" className="w-20 h-20 object-cover rounded-xl" />
+                <Image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=100&q=80" alt="Blog 3" className="w-20 h-20 object-cover rounded-xl" />
                 <div className="flex flex-col justify-between flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold">RUNNING</span>
