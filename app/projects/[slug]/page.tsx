@@ -33,6 +33,7 @@ const projects = [
   },
 ];
 
+// Trivial change: force fresh build
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return notFound();
