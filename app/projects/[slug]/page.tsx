@@ -34,6 +34,11 @@ const projects = [
 ];
 
 // Trivial change: force fresh build
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return notFound();
