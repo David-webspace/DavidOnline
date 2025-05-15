@@ -135,7 +135,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/graduation.jpg" alt="Update 1" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">Graduation Presentation</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is set to release her highly anticipated tenth studio album, The Right Person Will Stay, on May 21, 2025. This album marks a significant shift towards country and Americana genres, showcasing Lana&#39;s versatility and artistic evolution...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is set to release her highly anticipated tenth studio album, The Right Person Will Stay, on May 21, 2025. This album marks a significant shift towards country and Americana genres, showcasing Lana&apos;s versatility and artistic evolution...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/bluegear.png" alt="Update 2" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">BlueGear 2023</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey announces her 2025 UK and Ireland tour dates, with shows in London, Manchester, Dublin, and more. Tickets go on sale soon. Don&#39;t miss out on this unforgettable experience...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey announces her 2025 UK and Ireland tour dates, with shows in London, Manchester, Dublin, and more. Tickets go on sale soon. Don&apos;t miss out on this unforgettable experience...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/BAT2022.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">BAT 2022</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&apos;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -162,7 +162,7 @@ export default function AboutPage() {
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/nccu_golden.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">NCCU Golden Melody Awards 2023</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&apos;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/fox.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">Meichu 2023</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&apos;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
               <Image src="/updates/update3.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">2025 COACHELLA</div>
-              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
+              <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&apos;s biggest music festivals...</div>
               <div className="flex justify-end">
                 <span className="text-gray-400 text-2xl">→</span>
               </div>
