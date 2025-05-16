@@ -8,25 +8,25 @@ const projects = [
   {
     name: "MUN Society Taiwan",
     pathname : "mst",
-    image: "/MST_Banner.png",
+    image: "MST_Banner.png",
     tags: ["Web Development", "UIUX Design"],
   },
   {
     name: "Chuang Chih Hui",
     pathname : "chuangchihhui",
-    image: "/ChuangChihHui_Banner.jpg",
+    image: "ChuangChihHui_Banner.jpg",
     tags: ["Web Development", "ReactJs", "Ecommerce"],
   },
   {
     name: "Synopsys X NCTU Alumin Semiconductor Camp",
     pathname : "synopsys semiconductorcamp",
-    image: "/Semiconductorcamp.png",
+    image: "Semiconductorcamp.png",
     tags: ["Web Development", "ReactJs", "UIUX Design"],
   },
   {
     name: "Europa Eccommerce Website",
     pathname : "europa",
-    image: "/Europa_Banner.jpg",
+    image: "Europa_Banner.jpg",
     tags: ["Shopify", "Ecommerce"],
   },
 ];
