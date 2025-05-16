@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
         hostname: 'randomuser.me',
       },
     ],
+    domains: ['images.unsplash.com', 'images.pexels.com'],
   },
 };
 
