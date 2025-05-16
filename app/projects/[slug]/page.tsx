@@ -35,8 +35,17 @@ const projects: { slug: string; title: string; image: string; tags: string[]; de
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+export async function getStaticProps(context: { params: { slug: string } }) {
+  const { slug } = context.params;
+
+  // Fetch data or perform async operations
+  const project = projects.find((p) => p.slug === slug);
+
+  return {
+    props: {
+      project,
+    },
+  };
 }
 
 // Define the type for the props
@@ -47,7 +56,9 @@ interface ProjectPageProps {
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const { slug } = params;
+  
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return notFound();
 
   return (
