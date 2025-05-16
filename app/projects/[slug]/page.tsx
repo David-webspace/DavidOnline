@@ -4,30 +4,30 @@ import Image from "next/image";
 // Example static data for demonstration
 const projects: { slug: string; title: string; image: string; tags: string[]; description: string }[] = [
   {
-    slug: "mun-society-website",
+    slug: "mun_society_website",
     title: "MUN Society Website",
-    image: "/MST_Banner.png",
+    image: "MST_Banner.png",
     tags: ["UIUX Design", "App"],
     description: "A modern website for the MUN Society, featuring event management and resources.",
   },
   {
-    slug: "chuang-chih-hui",
+    slug: "chuang_chih_hui",
     title: "Chuang Chih Hui",
-    image: "/ChuangChihHui_Banner.jpg",
+    image: "ChuangChihHui_Banner.jpg",
     tags: ["UIUX Design", "Ecommerce"],
     description: "Ecommerce platform for beauty products with a focus on user experience.",
   },
   {
-    slug: "semiconductor-camp",
+    slug: "semiconductor_camp",
     title: "Synopsys X NCTU Alumin Semiconductor Camp",
-    image: "/Semiconductorcamp.png",
+    image: "Semiconductorcamp.png",
     tags: ["Web Design", "Travel"],
     description: "Camp website for Synopsys X NCTU Alumni, providing information and registration.",
   },
   {
-    slug: "europa-ecommerce-website",
+    slug: "europa_ecommerce_website",
     title: "Europa Eccommerce Website",
-    image: "/Europa_Banner.jpg",
+    image: "Europa_Banner.jpg",
     tags: ["UIUX Design", "Portfolio"],
     description: "Portfolio and ecommerce site for Europa, showcasing products and design skills.",
   },
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         ))}
       </div>
       <Image
-        src={project.image}
+        src={"/" + project.image}
         alt={project.title}
         width={600}
         height={360}
