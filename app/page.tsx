@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFigma, FaReact, FaNodeJs, FaShopify } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import Footer from "../components/Footer";
+import Footer from "./components/Footer";
 
 const NavigationBar = () => {
   return(
