@@ -35,6 +35,18 @@ const projects: { slug: string; title: string; image: string; tags: string[]; de
 
 export const dynamicParams = false;
 
+// Ensure this function is synchronous
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
+// Define the type for the props
+interface ProjectPageProps {
+  params: {
+    slug: string;
+  };
+}
+
 export async function getStaticProps(context: { params: { slug: string } }) {
   const { slug } = context.params;
 
@@ -45,13 +57,6 @@ export async function getStaticProps(context: { params: { slug: string } }) {
     props: {
       project,
     },
-  };
-}
-
-// Define the type for the props
-interface ProjectPageProps {
-  params: {
-    slug: string;
   };
 }
 
