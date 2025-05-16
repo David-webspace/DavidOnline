@@ -1,10 +1,6 @@
 import { notFound } from "next/navigation";
 
-interface ProjectPageProps {
-  params: { id: string };
-}
-
-const page = async ({ params }: ProjectPageProps) => {
+export default async function Page({ params }: { params: { id: string } }) {
   // Slug should match the filename in components/projects (e.g., mst)
   const componentPath = `../../components/projects/${params.id}`;
   let ProjectComponent;
@@ -14,8 +10,5 @@ const page = async ({ params }: ProjectPageProps) => {
     notFound();
   }
   return <ProjectComponent />;
-};
-
-export default page;
-
+}
 
