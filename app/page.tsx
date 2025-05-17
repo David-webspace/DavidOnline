@@ -93,7 +93,7 @@ const ServiceSection = () => {
 
 const JourneySection = () => {
   return(
-    <section className="w-full bg-white py-16 px-4 md:px-0">
+    <section className="w-full bg-white py-16 px-4 md:px-0 text-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
           My Academic and Professional <span className="text-blue-600">Journey</span>
@@ -109,19 +109,14 @@ const JourneySection = () => {
             </div>
             <ul className="space-y-4">
               <li>
-                <div className="text-xs text-gray-400 mb-1">29 JAN 2018 - 22 JAN 2020</div>
-                <div className="font-bold text-sm">SECONDARY SCHOOL CERTIFICATE <span className="font-normal text-xs text-gray-400">(Frontier Student Academy)</span></div>
-                <div className="text-xs text-gray-400">Peshawar, Pakistan</div>
+                <div className="font-bold text-xl">National Yang Ming Chiao Tune University</div>
+                <div className="text-xs text-gray-400">Hsinchu, Taiwan</div>
+                <div className="text-xs text-gray-400 mb-1">Sep 2019 - Jun 2024</div>
               </li>
               <li>
-                <div className="text-xs text-gray-400 mb-1">6 OCT 2020 - 6 OCT 2022</div>
-                <div className="font-bold text-sm">HIGHER SECONDARY SCHOOL CERTIFICATE <span className="font-normal text-xs text-gray-400">(B.C.T - DHOOD)</span></div>
+                <div className="font-bold text-xl">Taipei Municipal Chenggong High School</div>
                 <div className="text-xs text-gray-400">Peshawar, Pakistan</div>
-              </li>
-              <li>
-                <div className="text-xs text-gray-400 mb-1">9 MAY 2023 - 3 SEP 2023</div>
-                <div className="font-bold text-sm">ADDITIONAL MATHEMATICS <span className="font-normal text-xs text-gray-400">(DONI Degree College Shabqadar)</span></div>
-                <div className="text-xs text-gray-400">Shabqadar, Pakistan</div>
+                <div className="text-xs text-gray-400 mb-1">2016 - Jun 2019</div>
               </li>
             </ul>
           </div>
@@ -135,19 +130,19 @@ const JourneySection = () => {
             </div>
             <ul className="space-y-4">
               <li>
-                <div className="text-xs text-gray-400 mb-1">MAR 2022 - JUL 2022</div>
-                <div className="font-bold text-sm">SALES ASSISTANT INSPIRED SUPERMARKET</div>
-                <div className="text-xs text-gray-400">Peshawar, Pakistan</div>
+                <div className="font-bold text-xl">ECommerce Web Developer</div>
+                <div className="font-bold text-sm">Wavenet Technology.</div>
+                <div className="text-xs text-gray-400 mb-1">APR 2025 - Present</div>
               </li>
               <li>
-                <div className="text-xs text-gray-400 mb-1">FEB 2023 - JAN 2024</div>
-                <div className="font-bold text-sm">FRONT DESK MANAGER FERN STEAK HOUSE</div>
-                <div className="text-xs text-gray-400">Peshawar, Pakistan</div>
+                <div className="font-bold text-xl">UX Intern</div>
+                <div className="font-bold text-sm">QNAP Systems, Inc.</div>
+                <div className="text-xs text-gray-400 mb-1">JUN 2024 - NOV 2024</div>
               </li>
               <li>
-                <div className="text-xs text-gray-400 mb-1">JAN 2023 - JAN 2024</div>
-                <div className="font-bold text-sm">RETAIL MANAGER MYWAZ</div>
-                <div className="text-xs text-gray-400">Peshawar, Pakistan</div>
+                <div className="font-bold text-xl">UIUX Intern</div>
+                <div className="text-sm">CRYPTO-ARSENAL TECHNOLOGY CO.</div>
+                <div className="text-xs text-gray-400 mb-1">Feb 2024 - JUN 2024</div>
               </li>
             </ul>
           </div>
