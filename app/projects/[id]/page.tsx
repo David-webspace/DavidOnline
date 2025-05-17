@@ -1,4 +1,11 @@
 import { notFound } from "next/navigation";
+
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
 const components: Record<string, () => Promise<{ default: React.ComponentType<object> }>> = {
   mst: () => import("../../components/projects/mst"),
   europa: () => import("../../components/projects/europa"),
@@ -7,9 +14,16 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   // ...add all your project files here
 };
 
-export default async function Page({ params }: { params: { id: string } }) {
+const Page = async ({ params }: PageProps) => {
   const importComponent = components[params.id];
-  if (!importComponent) return notFound();
+
+  if (!importComponent) {
+    return notFound();
+  }
+
   const ProjectComponent = (await importComponent()).default;
+
   return <ProjectComponent />;
-}
+};
+
+export default Page;
