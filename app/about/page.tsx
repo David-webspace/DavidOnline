@@ -133,7 +133,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
-              <Image src="/bluegear.png" alt="Update 1" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+              <Image src="/graduation.jpg" alt="Update 1" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">Graduation Presentation</div>
               <div className="text-gray-900 text-sm mb-4">Lana Del Rey is set to release her highly anticipated tenth studio album, The Right Person Will Stay, on May 21, 2025. This album marks a significant shift towards country and Americana genres, showcasing Lana&#39;s versatility and artistic evolution...</div>
               <div className="flex justify-end">
