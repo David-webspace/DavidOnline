@@ -20,14 +20,14 @@ const projects = [
   },
   {
     name: "Synopsys X NCTU Alumin Semiconductor Camp",
-    pathname : "synopsys semiconductorcamp",
+    pathname : "synopsys_semiconductorcamp",
     image: "Semiconductorcamp.png",
     tags: ["Web Development", "ReactJs", "UIUX Design"],
   },
   {
     name: "Europa Eccommerce Website",
     pathname : "europa",
-    image: "Europa_Banner.jpg",
+    image: "Europa_Banner.png",
     tags: ["Shopify", "Ecommerce"],
   },
 ];

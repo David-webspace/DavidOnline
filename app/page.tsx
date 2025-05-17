@@ -48,7 +48,6 @@ const ServiceSection = () => {
     <div className="max-w-6xl mx-auto">
     <div className="flex items-center justify-between mb-10">
       <div>
-        <span className="block text-gray-500 italic mb-1">&ndash; Services</span>
         <h2 className="text-3xl md:text-4xl font-bold">
           <span className="text-blue-600">Services</span> <span className="text-black">I Provide</span>
         </h2>
@@ -61,27 +60,31 @@ const ServiceSection = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {/* Card 1 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-3 mb-4">
-          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 8h8v8H8z"/></svg>
+        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
+          <Image src="/website.svg" alt="Website" width={64} height={64}/>
         </div>
-        <h3 className="text-lg font-semibold mb-2">Website design & Development</h3>
-        <p className="text-gray-500 text-sm">Create functional, engaging, and user-friendly websites.</p>
+        <h3 className="text-lg font-semibold text-black mb-2">Website Development</h3>
+        <p className="text-gray-500 text-sm mb-2">Create functional, engaging, and user-friendly websites.</p>
+        <p className="text-gray-500 text-sm mb-2">Provide cross-border payment flow and local logistics integration in Taiwan.</p>
+        <p className="text-gray-500 text-sm mb-2">Bind domains and set up an e-commerce backend.</p>
       </div>
       {/* Card 2 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-3 mb-4">
-          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
+          <Image src="/wireframe.svg" alt="Wireframe" width={64} height={64}/>
         </div>
-        <h3 className="text-lg font-semibold mb-2">UIUX Design</h3>
-        <p className="text-gray-500 text-sm">SEO improves website visibility, rankings, and organic traffic online website visibility, rankings.</p>
+        <h3 className="text-lg font-semibold text-black mb-2">UIUX Design</h3>
+        <p className="text-gray-500 text-sm mb-2">Intuitive and user-friendly: Design should be simple and clear, enabling users to quickly get started and complete tasks efficiently.</p>
+        <p className="text-gray-500 text-sm mb-2">Address user pain points, help achieve goals, and provide practical value.</p>
+        <p className="text-gray-500 text-sm mb-2">Create positive interactions and emotional connections to enhance user satisfaction and loyalty.</p>
       </div>
       {/* Card 3 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-3 mb-4">
-          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
+          <Image src="/communication.svg" alt="Communication" width={64} height={64}/>
         </div>
-        <h3 className="text-lg font-semibold mb-2">Content Writing</h3>
-        <p className="text-gray-500 text-sm">Delivers engaging, informative, and valuable content for audiences informative, and valuable content.</p>
+        <h3 className="text-lg font-semibold text-black mb-2">Effective Communication</h3>
+        <p className="text-gray-500 text-sm">Meeting Needs, Building Trust, and Fostering Internal and External Collaboration for Value Creation</p>
       </div>
     </div>
     </div>

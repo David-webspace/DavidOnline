@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="bg-blue-400 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-2">O</span>
               <span className="text-xl font-semibold">Justin Pan</span>
             </div>
-            <p className="text-gray-500 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="text-gray-500 text-sm mb-4">Please feel free to contact me for any inquiries or questions.</p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/" target="_blank" className="bg-blue-400 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaFacebookF /></a>
               <a href="https://www.behance.net/altondesignplace" target="_blank" className="bg-blue-400 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaBehance /></a>
@@ -40,7 +40,7 @@ export default function Footer() {
             <div>
               <div className="font-semibold text-blue-600 mb-2">Contact</div>
               <div className="text-gray-700 text-sm mb-1">+886 970711698</div>
-              <div className="text-gray-700 text-sm mb-1">www.web.affabledavid5288@gmail.com</div>
+              <div className="text-gray-700 text-sm mb-1">web.affabledavid5288@gmail.com</div>
             </div>
           </div>
 
@@ -61,14 +61,14 @@ export default function Footer() {
                 <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11h12M11 4l7 7-7 7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
             </form>
-            <div className="flex justify-end mt-4">
+            {/* <div className="flex justify-end mt-4">
               <Link href="/blogs" className="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow transition">
                 View All Blogs
                 <span className="inline-block ml-2 bg-white text-blue-500 rounded-full w-7 h-7 flex items-center justify-center">
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="#F59E0B" strokeWidth="2"/><path d="M8 10h4M10 8l2 2-2 2" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </span>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

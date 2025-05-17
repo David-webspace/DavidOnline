@@ -18,16 +18,8 @@ export default function ChuangChihHuiProject() {
           icon: "SiReact",
         },
         {
-          name: "NextJs",
-          icon: "SiNextdotjs",
-        },
-        {
-          name: "TypeScript",
-          icon: "SiTypescript",
-        },
-        {
-          name: "TailwindCSS",
-          icon: "SiTailwindcss",
+          name: "CSS",
+          icon: "SiCss3",
         },
         {
           name: "Figma",
