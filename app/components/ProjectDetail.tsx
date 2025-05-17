@@ -88,7 +88,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about
               </li>
             ))}
           </ul>
-        </section>
+         </section>
 
         {/* Image */}
         {images && images.length > 0 && (
