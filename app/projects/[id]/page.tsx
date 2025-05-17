@@ -1,18 +1,19 @@
 import { notFound } from "next/navigation";
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
-
 const components: Record<string, () => Promise<{ default: React.ComponentType<object> }>> = {
   mst: () => import("../../components/projects/mst"),
   europa: () => import("../../components/projects/europa"),
   chuangchihhui: () => import("../../components/projects/chuangchihhui"),
-  synopsyssemiconductorcamp: () => import("../../components/projects/synopsys-semiconductorcamp"),
+  synopsyssemiconductorcamp: () =>
+    import("../../components/projects/synopsys-semiconductorcamp"),
   // ...add all your project files here
 };
+
+interface PageProps {
+  params: {
+    id: string; // Explicitly define the type for params
+  };
+}
 
 const Page = async ({ params }: PageProps) => {
   const importComponent = components[params.id];
