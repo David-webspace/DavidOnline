@@ -8,7 +8,7 @@ import NavigationBar from "./NavigationBar";
 
 interface ProjectDetailProps { title: string; banner: string; category: string; url: string; about: string[]; skills: { name: string; icon: string }[]; industries: string[]; benefits: string[]; images: string[]; }
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, industries, benefits, images }) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about, skills, industries, benefits, images }) => {
   const [showAllImages, setShowAllImages] = useState(false);
   return (
     <div className="min-h-screen bg-gray-50">

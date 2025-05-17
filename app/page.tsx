@@ -62,18 +62,18 @@ const ServiceSection = () => {
       {/* Card 1 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
         <div className="bg-blue-100 text-blue-600 rounded-full p-3 mb-4">
-          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </div>
-        <h3 className="text-lg font-semibold mb-2">UIUX Design</h3>
-        <p className="text-gray-500 text-sm">SEO improves website visibility, rankings, and organic traffic online website visibility, rankings.</p>
-      </div>
-      {/* Card 2 */}
-      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-3 mb-4">
           <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 8h8v8H8z"/></svg>
         </div>
         <h3 className="text-lg font-semibold mb-2">Website design & Development</h3>
         <p className="text-gray-500 text-sm">Create functional, engaging, and user-friendly websites.</p>
+      </div>
+      {/* Card 2 */}
+      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
+        <div className="bg-blue-100 text-blue-600 rounded-full p-3 mb-4">
+          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </div>
+        <h3 className="text-lg font-semibold mb-2">UIUX Design</h3>
+        <p className="text-gray-500 text-sm">SEO improves website visibility, rankings, and organic traffic online website visibility, rankings.</p>
       </div>
       {/* Card 3 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
