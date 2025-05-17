@@ -1,16 +1,16 @@
 import React from "react";
 import ProjectDetail from "../ProjectDetail";
 
-export default function MSTProject() {
+export default function SynopsysSemiconductorCampProject() {
   return (
     <ProjectDetail
-      title="MUN Society Taiwan"
-      banner="/MST_Banner.png"
+      title="Synopsys X NCTU Alumin Semiconductor Camp"
+      banner="/Semiconductorcamp.png"
       category="Website"
-      url="https://munsoc.tw/"
+      url="https://semiconductorcamp.com/"
       about={[
-        "It was an incredible honor to participate in the MUN Society Taiwan project as the CTO. I single-handedly designed and developed the official website from scratch, ensuring it met modern usability and design standards. Additionally, I co-organized an international conference in collaboration with Harvard University, which was a milestone achievement for the organization.",
-        "The MUN Society Taiwan (MST) is a cross-campus organization established in 2021 to promote Model United Nations (MUN) activities in Taiwan. It connects MUN enthusiasts, organizes conferences like the Taiwan International Model United Nations (TIMUN), and provides resources to enhance students' international awareness and leadership skills. MST has represented Taiwan at global events, such as WorldMUN Paris in 2023, and hosted large-scale conferences in collaboration with educational and research organizations."
+        "I was honored to lead the Synopsys X NCTU Alumin Semiconductor Camp project as the CTO. I single-handedly designed and developed the official website from scratch, ensuring it met modern usability and design standards. I also co-organized the camp with Synopsys, a leading semiconductor company, which was a milestone achievement for the organization.",
+        "The Synopsys X NCTU Alumin Semiconductor Camp is a cross-campus organization established in 2021 to promote Model United Nations (MUN) activities in Taiwan. It connects MUN enthusiasts, organizes conferences like the Taiwan International Model United Nations (TIMUN), and provides resources to enhance students' international awareness and leadership skills. MST has represented Taiwan at global events, such as WorldMUN Paris in 2023, and hosted large-scale conferences in collaboration with educational and research organizations."
       ]}
       skills={[
         {
@@ -36,7 +36,7 @@ export default function MSTProject() {
       ]}
       industries={[
         "Education",
-        "MUN Society Taiwan",
+        "Synopsys X NCTU Alumin Semiconductor Camp",
         "Harvard University",
         "English Communication",
         "Web Development",

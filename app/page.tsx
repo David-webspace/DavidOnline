@@ -1,24 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaFigma, FaReact, FaNodeJs, FaShopify } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import Footer from "./components/Footer";
-
-const NavigationBar = () => {
-  return(
-    <nav className="w-full flex items-center justify-between px-8 py-4 bg-white shadow-sm z-10">
-      <div className="flex items-center gap-2">
-        <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl">JP</div>
-      </div>
-      <div className="flex items-center gap-8">
-        <Link href="/" className="text-blue-600 font-semibold">HOME</Link>
-        <Link href="/about" className="text-gray-700 hover:text-blue-600">ABOUT ME</Link>
-        <Link href="/projects" className="text-gray-700 hover:text-blue-600">PROJECTS</Link>
-      </div>
-      <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">Contact me</Link>
-    </nav>
-  )
-}
+import NavigationBar from "./components/NavigationBar";
+import ScrollToTop from "./components/ScrollToTop";
 
 const HeroSection =() => {
   return(
@@ -341,6 +326,7 @@ export default function Home() {
         <span>Email Marketing</span>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

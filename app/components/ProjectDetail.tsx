@@ -1,28 +1,36 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import NavigationBar from "./NavigationBar";
 
-interface ProjectDetailProps {
-  title: string;
-  banner: string;
-  about: string;
-  services: string[];
-  industries: string[];
-  benefits: string[];
-  images: string[];
-}
+interface ProjectDetailProps { title: string; banner: string; category: string; url: string; about: string[]; skills: { name: string; icon: string }[]; industries: string[]; benefits: string[]; images: string[]; }
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({
-  title,
-  banner,
-  about,
-  services,
-  industries,
-  benefits,
-  images,
-}) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, industries, benefits, images }) => {
+  const [showAllImages, setShowAllImages] = useState(false);
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Navigation Bar */}
+      <NavigationBar />
+
+      {/* Top Banner */}
+      <section className="bg-blue-600 text-white py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <nav className="mb-4 text-sm text-blue-100">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span className="mx-2">&gt;</span>
+            <Link href="/projects" className="hover:underline">Projects</Link>
+            <span className="mx-2">&gt;</span>
+            <span className="font-semibold">{title}</span>
+          </nav>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">{title}</h1>
+        </div>
+      </section>
+
       <div className="max-w-6xl mx-auto py-10 px-4">
+        {/* Image Banner */}
         <div className="mb-6">
           <Image
             src={banner}
@@ -32,34 +40,77 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             className="rounded-xl w-full object-cover mb-4"
           />
         </div>
+        
+        {/* Descriptions */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-2">MUN Society Taiwan</h2>
-          <p className="text-gray-700 text-sm leading-relaxed">{about}</p>
+          <div className="mb-4 flex justify-between items-end gap-2">
+            <h2 className="text-5xl font-bold text-black">{title}</h2>
+            <Link
+              href={url}
+              className="text-blue-600 hover:underline text-sm font-semibold bg-blue-50 px-4 py-2 rounded shadow-sm hover:bg-blue-600 hover:text-white transition"
+              target="_blank"
+            >
+              {title}
+            </Link>
+          </div>
+          {about.map((paragraph, i) => (
+            <p key={i} className="text-gray-700 text-md leading-relaxed mb-3">{paragraph}</p>
+          ))}
         </section>
+
+          {/* Benefits */}
+          <section className="mb-8">
+          <h3 className="font-semibold mb-2 text-xl text-black">Services Benefits:</h3>
+          <ul className="list-disc pl-5 text-md text-gray-700">
+            {benefits.map((benefit, i) => (
+              <li key={i}>{benefit}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Skills */}
         <section className="mb-8">
-          <h3 className="font-semibold mb-2">Services Include:</h3>
-          <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
-            {services.map((service, i) => (
-              <li key={i} className="flex items-center gap-2">
-                <span className="text-orange-500">●</span> {service}
+          <h3 className="font-semibold mb-2 text-xl text-black">Skills Include:</h3>
+          <ul className="grid grid-cols-2 md:grid-cols-6 gap-2 text-sm">
+            {skills.map((skill, i) => (
+              <li key={i} className="flex items-center gap-2 text-gray-700 text-lg">
+                {React.createElement(require(`react-icons/si`)[skill.icon], { size: 24, className: "text-black" })}
+                {skill.name}
               </li>
             ))}
           </ul>
         </section>
+
+        {/* Image */}
         {images && images.length > 0 && (
-          <section className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-            {images.map((img, i) => (
-              <Image
-                key={i}
-                src={img}
-                alt={title + " screenshot " + (i + 1)}
-                width={400}
-                height={260}
-                className="rounded-xl w-full object-cover"
-              />
-            ))}
-          </section>
+          <>
+            <h3 className="font-semibold mb-2 text-xl text-black">Project Photos: </h3>
+            <section className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+              {(showAllImages ? images : images.slice(0, 3)).map((img, i) => (
+                <Image
+                  key={i}
+                  src={img}
+                  alt={title + " img " + (i + 1)}
+                  width={400}
+                  height={260}
+                  className="rounded-xl w-full object-cover"
+                />
+              ))}
+            </section>
+            {images.length > 3 && (
+              <div className="mb-8 flex justify-center">
+                <button
+                  className="px-6 py-2 bg-blue-300 text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setShowAllImages(!showAllImages)}
+                >
+                  {showAllImages ? "See less" : "See more"}
+                </button>
+              </div>
+            )}
+          </>
         )}
+
+        {/* Industries */}
         <section className="mb-8">
           <h3 className="font-semibold mb-2">Top Industries I Cover in App Design</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
@@ -69,14 +120,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
               </div>
             ))}
           </div>
-        </section>
-        <section>
-          <h3 className="font-semibold mb-2">Services Benefits:</h3>
-          <ul className="list-disc pl-5 text-sm text-gray-700">
-            {benefits.map((benefit, i) => (
-              <li key={i}>{benefit}</li>
-            ))}
-          </ul>
         </section>
       </div>
     </div>

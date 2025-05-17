@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/Footer";
-
+import NavigationBar from "../components/NavigationBar";
+import ScrollToTop from "../components/ScrollToTop";
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     name: "Chuang Chih Hui",
     pathname : "chuangchihhui",
     image: "ChuangChihHui_Banner.jpg",
-    tags: ["Web Development", "ReactJs", "Ecommerce"],
+    tags: ["Web Development", "ReactJs"],
   },
   {
     name: "Synopsys X NCTU Alumin Semiconductor Camp",
@@ -38,6 +39,10 @@ function slugify(name: string) {
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+
+      {/* Navigation Bar */}
+      <NavigationBar />
+
       {/* Top Banner */}
       <section className="bg-blue-600 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
@@ -62,18 +67,19 @@ export default function ProjectsPage() {
               href={`/projects/${slugify(project.pathname)}`}
               className="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition"
             >
-              <Image src={project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
+              <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
               <div className="flex gap-2 mb-2">
                 {project.tags.map(tag => (
                   <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
                 ))}
               </div>
-              <div className="font-semibold text-lg mb-1">{project.name}</div>
+              <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
             </Link>
           ))}
         </div>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

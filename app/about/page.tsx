@@ -3,18 +3,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import NavigationBar from "../components/NavigationBar";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Navigation Bar */}
+      <NavigationBar />
+
       {/* Top Banner */}
       <section className="bg-blue-600 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
-            <Link href="/" className="hover:underline">Home</Link> <span className="mx-2">/</span> <span className="font-semibold">About me</span>
+            <Link href="/" className="hover:underline">Home</Link> <span className="mx-2">&gt;</span> <span className="font-semibold">About me</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">ABOUT US</h1>
-          <div className="text-blue-200">Home &gt; About me</div>
         </div>
       </section>
 
@@ -44,10 +48,10 @@ export default function AboutPage() {
               <div className="text-gray-500 text-xs">Years of Experience</div>
             </div>
           </div>
-          <a href="/cv.pdf" className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition w-max">
+          <Link href="/Cheng_Syu_Pan_CV.pdf" target="_blank" className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition w-max">
             Download CV
             <span className="inline-block transform translate-x-0.5">→</span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -169,7 +173,7 @@ export default function AboutPage() {
             </div>
              {/* Card 5 */}
              <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between min-h-[280px]">
-              <Image src="/fox.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+              <Image src="/fox.png" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
               <div className="text-black font-bold text-xl mb-2">Meichu 2023</div>
               <div className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</div>
               <div className="flex justify-end">
@@ -189,6 +193,7 @@ export default function AboutPage() {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </div>
 
   );
