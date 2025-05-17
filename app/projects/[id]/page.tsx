@@ -1,13 +1,15 @@
 import { notFound } from "next/navigation";
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
-  // Slug should match the filename in components/projects (e.g., mst)
-  const componentPath = `../../components/projects/${(await params).id}`;
-  let ProjectComponent;
-  try {
-    ProjectComponent = (await import(componentPath)).default;
-  } catch {
-    notFound();
-  }
+const components: Record<string, () => Promise<{ default: React.ComponentType<any> }>> = {
+  mst: () => import("../../components/projects/mst"),
+  europa: () => import("../../components/projects/europa"),
+  chuangchihhui: () => import("../../components/projects/chuangchihhui"),
+  synopsyssemiconductorcamp: () => import("../../components/projects/synopsys-semiconductorcamp"),
+  // ...add all your project files here
+};
+
+export default async function Page({ params }: { params: { id: string } }) {
+  const importComponent = components[params.id];
+  if (!importComponent) return notFound();
+  const ProjectComponent = (await importComponent()).default;
   return <ProjectComponent />;
 }
-
