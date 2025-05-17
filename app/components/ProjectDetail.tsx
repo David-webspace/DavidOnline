@@ -3,10 +3,19 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-// import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import NavigationBar from "./NavigationBar";
 
 interface ProjectDetailProps { title: string; banner: string; category: string; url: string; about: string[]; skills: { name: string; icon: string }[]; industries: string[]; benefits: string[]; images: string[]; }
+
+const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
+  SiReact,
+  SiFigma,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  // Add more icons here as needed
+};
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about, skills, industries, benefits, images }) => {
   const [showAllImages, setShowAllImages] = useState(false);
@@ -74,7 +83,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about
           <ul className="grid grid-cols-2 md:grid-cols-6 gap-2 text-sm">
             {skills.map((skill, i) => (
               <li key={i} className="flex items-center gap-2 text-gray-700 text-lg">
-                {React.createElement(require(`react-icons/si`)[skill.icon], { size: 24, className: "text-black" })}
+                {iconMap[skill.icon as string] ? React.createElement(iconMap[skill.icon as string], { size: 24, className: "text-black" }) : null}
                 {skill.name}
               </li>
             ))}
