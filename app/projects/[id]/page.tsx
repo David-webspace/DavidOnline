@@ -4,8 +4,9 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   mst: () => import("../../components/projects/mst"),
   europa: () => import("../../components/projects/europa"),
   chuangchihhui: () => import("../../components/projects/chuangchihhui"),
-  synopsyssemiconductorcamp: () =>import("../../components/projects/synopsys-semiconductorcamp"),
-  // ...add all your project files here
+  synopsyssemiconductorcamp: () =>
+    import("../../components/projects/synopsys-semiconductorcamp"),
+  // Add all your project files here
 };
 
 interface PageProps {
@@ -14,8 +15,8 @@ interface PageProps {
   };
 }
 
-export default async function Page({ params }: PageProps) {
-  const importComponent = await components[params.id];
+const Page = async ({ params }: PageProps) => {
+  const importComponent = components[params.id];
 
   if (!importComponent) {
     return notFound();
@@ -25,3 +26,5 @@ export default async function Page({ params }: PageProps) {
 
   return <ProjectComponent />;
 };
+
+export default Page;
