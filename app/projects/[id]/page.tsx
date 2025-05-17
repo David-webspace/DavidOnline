@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-const components: Record<string, () => Promise<{ default: React.ComponentType<any> }>> = {
+const components: Record<string, () => Promise<{ default: React.ComponentType<object> }>> = {
   mst: () => import("../../components/projects/mst"),
   europa: () => import("../../components/projects/europa"),
   chuangchihhui: () => import("../../components/projects/chuangchihhui"),
