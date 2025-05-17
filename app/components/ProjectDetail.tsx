@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+// import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import NavigationBar from "./NavigationBar";
 
 interface ProjectDetailProps { title: string; banner: string; category: string; url: string; about: string[]; skills: { name: string; icon: string }[]; industries: string[]; benefits: string[]; images: string[]; }
