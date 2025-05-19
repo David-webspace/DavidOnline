@@ -2,28 +2,19 @@
 
 import Link from "next/link";
 import ScrollToTop from "../components/ScrollToTop";
+import Script from "next/script";
 
 export default function ContactPage() {
   return (
     <>
+      <Script
+        id="mcjs"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/683f45251417b61f67e601f68/1ac3b0c4f04e80bd7eee5e765.js");`
+        }}
+      />
       <main className="max-w-3xl mx-auto py-12 px-4">
-        <h1 className="text-4xl font-bold mb-4">Contact</h1>
-        <p className="mb-6">Feel free to reach out to me via the form below or at <a href="mailto:[your.email@example.com]" className="text-blue-600 underline">[your.email@example.com]</a>.</p>
-        <form className="space-y-4 mb-5">
-          <div>
-            <label className="block mb-1 font-medium">Name</label>
-            <input type="text" className="w-full border px-3 py-2 rounded" required />
-          </div>
-          <div>
-            <label className="block mb-1 font-medium">Email</label>
-            <input type="email" className="w-full border px-3 py-2 rounded" required />
-          </div>
-          <div>
-            <label className="block mb-1 font-medium">Message</label>
-            <textarea className="w-full border px-3 py-2 rounded" rows={5} required></textarea>
-          </div>
-          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
-        </form>
         <Link href="/">Back to Home</Link>
       </main>
       <ScrollToTop />
