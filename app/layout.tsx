@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+// import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Paste your Mailchimp script here */}
-        <Script
+        {/* <Script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
@@ -40,7 +40,7 @@ export default function RootLayout({
               })(document,"script","https://chimpstatic.com/mcjs-connected/js/users/683f45251417b61f67e601f68/1ac3b0c4f04e80bd7eee5e765.js");
             `,
           }}
-        />
+        /> */}
         {children}
       </body>
     </html>
