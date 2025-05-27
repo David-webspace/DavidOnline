@@ -1,9 +1,9 @@
 
-import { FaFigma, FaReact, FaNodeJs, FaShopify, FaInstagramSquare, FaFacebookSquare, FaLinkedin, FaBehanceSquare, FaGithubSquare } from "react-icons/fa";
+import { FaFigma, FaReact, FaNodeJs, FaShopify } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import Footer from "./components/Footer";
-import NavigationBar from "./components/NavigationBar";
-import ScrollToTop from "./components/ScrollToTop";
+import Footer from "../components/Footer";
+import NavigationBar from "../components/NavigationBar";
+import ScrollToTop from "../components/ScrollToTop";
 import Image from "next/image";
 
 const HeroSection =() => {
@@ -14,23 +14,14 @@ const HeroSection =() => {
         <span className="text-lg font-medium text-gray-700 mb-2 bg-blue-50 px-3 py-1 rounded">Hello !</span>
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
           I’m <span className="text-blue-600 underline">Justin Pan</span>,<br/>
-          <span className="text-black">Web Designer & Developer</span>
+          <span className="text-black">Web Designer & Developer Enthusiast</span>
         </h1>
-        <p className="text-gray-500 mb-4 text-base md:text-lg">
-          我叫潘丞詡。畢業於國立陽明交通大學百川學士學位學程，接觸過電機工程、跨領域設計相關課程。目前負責前端網站架設，也能夠進行UIUX研究流程，並熟悉Figma操作。
-        </p>
-        <p className="text-gray-500 mb-4 text-base md:text-lg">
-          我使用NextJS, ReactJS, NodeJS等框架建立網站，也有完成RWD的能力，並熟悉使用Shopify來建立電商網站。
-        </p>
         <p className="text-gray-500 mb-6 text-base md:text-lg">
-          我很積極，好相處善溝通，懂得如何進行團體合作，並盡力達成團隊的需求。我喜歡學習新的知識，不斷地提升自我能力將會創造更大的價值。若您有外包設計需求，歡迎與我聯絡。
+          Innovative Website Developer with expertise in driving online growth through strategic design and development. Passionate about UI/UX and delivering impactful digital experiences.
         </p>
         <div className="flex gap-4 mb-8">
-          <a href="https://www.instagram.com/chenshshei/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 transition"><FaInstagramSquare size={28} /></a>
-          <a href="https://www.facebook.com/justin.pan.277434/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 transition"><FaFacebookSquare size={28} /></a>
-          <a href="https://www.linkedin.com/in/justin-pan-375560255/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 transition"><FaLinkedin size={28} /></a>
-          <a href="https://www.behance.net/altondesignplace" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 transition"><FaBehanceSquare size={28} /></a>
-          <a href="https://github.com/David-webspace" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 transition"><FaGithubSquare size={28} /></a>
+          <a href="#" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">Hire Me</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="border border-gray-400 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition">Whatsapp</a>
         </div>
       </div>
       {/* Right: Photo */}
@@ -59,11 +50,11 @@ const ServiceSection = () => {
     <div className="flex items-center justify-between mb-10">
       <div>
         <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="text-black">提供的</span> <span className="text-blue-600">服務</span>
+          <span className="text-blue-600">Services</span> <span className="text-black">I Provide</span>
         </h2>
       </div>
       <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
-        查看更多
+        See More
         <span className="inline-block transform translate-x-0.5">→</span>
       </button>
     </div>
@@ -73,28 +64,28 @@ const ServiceSection = () => {
         <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
           <Image src="/website.svg" alt="Website" width={64} height={64}/>
         </div>
-        <h3 className="text-lg font-semibold text-black mb-2">網站開發</h3>
-        <p className="text-gray-500 text-sm mb-2">建立功能完整、引人入勝且使用者友好的網站。</p>
-        <p className="text-gray-500 text-sm mb-2">提供跨境支付流程和本地物流整合。</p>
-        <p className="text-gray-500 text-sm mb-2">綁定域名並建立電子商務後台。</p>
+        <h3 className="text-lg font-semibold text-black mb-2">Website Development</h3>
+        <p className="text-gray-500 text-sm mb-2">Create functional, engaging, and user-friendly websites.</p>
+        <p className="text-gray-500 text-sm mb-2">Provide cross-border payment flow and local logistics integration in Taiwan.</p>
+        <p className="text-gray-500 text-sm mb-2">Bind domains and set up an e-commerce backend.</p>
       </div>
       {/* Card 2 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
         <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
           <Image src="/wireframe.svg" alt="Wireframe" width={64} height={64}/>
         </div>
-        <h3 className="text-lg font-semibold text-black mb-2">UIUX設計</h3>
-        <p className="text-gray-500 text-sm mb-2">直覺且使用者友好的設計：設計應簡單且清晰，使使用者能夠快速開始並高效完成任務。</p>
-        <p className="text-gray-500 text-sm mb-2">解決使用者的痛點，幫助實現目標，並提供實用的價值。</p>
-        <p className="text-gray-500 text-sm mb-2">建立積極的互動和情感聯繫，增強使用者的滿意度和忠誠度。</p>
+        <h3 className="text-lg font-semibold text-black mb-2">UIUX Design</h3>
+        <p className="text-gray-500 text-sm mb-2">Intuitive and user-friendly: Design should be simple and clear, enabling users to quickly get started and complete tasks efficiently.</p>
+        <p className="text-gray-500 text-sm mb-2">Address user pain points, help achieve goals, and provide practical value.</p>
+        <p className="text-gray-500 text-sm mb-2">Create positive interactions and emotional connections to enhance user satisfaction and loyalty.</p>
       </div>
       {/* Card 3 */}
       <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
         <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
           <Image src="/communication.svg" alt="Communication" width={64} height={64}/>
         </div>
-        <h3 className="text-lg font-semibold text-black mb-2">高效率的溝通能力</h3>
-        <p className="text-gray-500 text-sm">溝通需求、建立信任、促進內部和外部合作，以實現價值創造</p>
+        <h3 className="text-lg font-semibold text-black mb-2">Effective Communication</h3>
+        <p className="text-gray-500 text-sm">Meeting Needs, Building Trust, and Fostering Internal and External Collaboration for Value Creation</p>
       </div>
     </div>
     </div>
@@ -106,7 +97,7 @@ const JourneySection = () => {
     <section className="w-full bg-white py-16 px-4 md:px-0 text-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          學術與專業 <span className="text-blue-600">歷程</span>
+          My Academic and Professional <span className="text-blue-600">Journey</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Education Card */}
@@ -115,17 +106,17 @@ const JourneySection = () => {
               <span className="bg-blue-100 text-blue-600 rounded-full p-2">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 3L2 9l10 6 10-6-10-6z"/><path d="M2 17l10 6 10-6"/></svg>
               </span>
-              <span className="font-semibold text-lg text-blue-600">教育</span>
+              <span className="font-semibold text-lg">Education</span>
             </div>
             <ul className="space-y-4">
               <li>
-                <div className="font-bold text-xl">國立陽明交通大學百川學士學位學程</div>
-                <div className="text-xs text-gray-400 mb-1">新竹, 台灣</div>
+                <div className="font-bold text-xl">National Yang Ming Chiao Tune University</div>
+                <div className="text-xs text-gray-400">Hsinchu, Taiwan</div>
                 <div className="text-xs text-gray-400 mb-1">Sep 2019 - Jun 2024</div>
               </li>
               <li>
-                <div className="font-bold text-xl">台北市立成功高級中學</div>
-                <div className="text-xs text-gray-400 mb-1">台北市, 台灣</div>
+                <div className="font-bold text-xl">Taipei Municipal Chenggong High School</div>
+                <div className="text-xs text-gray-400">Peshawar, Pakistan</div>
                 <div className="text-xs text-gray-400 mb-1">2016 - Jun 2019</div>
               </li>
             </ul>
@@ -136,22 +127,22 @@ const JourneySection = () => {
               <span className="bg-blue-100 text-blue-600 rounded-full p-2">
                 <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
               </span>
-              <span className="font-semibold text-lg text-blue-600">工作經驗</span>
+              <span className="font-semibold text-lg">Work Experience</span>
             </div>
             <ul className="space-y-4">
               <li>
-                <div className="font-bold text-xl">電商網站工程師</div>
-                <div className="font-bold text-sm mb-1">潮網科技股份有限公司（Wavenet）</div>
+                <div className="font-bold text-xl">ECommerce Web Developer</div>
+                <div className="font-bold text-sm">Wavenet Technology.</div>
                 <div className="text-xs text-gray-400 mb-1">APR 2025 - Present</div>
               </li>
               <li>
-                <div className="font-bold text-xl">UX實習生</div>
-                <div className="font-bold text-sm mb-1">威聯通科技股份有限公司 （QNAP Systems, Inc.）</div>
+                <div className="font-bold text-xl">UX Intern</div>
+                <div className="font-bold text-sm">QNAP Systems, Inc.</div>
                 <div className="text-xs text-gray-400 mb-1">JUN 2024 - NOV 2024</div>
               </li>
               <li>
-                <div className="font-bold text-xl">UIUX實習生</div>
-                <div className="font-bold text-sm mb-1">奇策智能雲端有限公司 （CRYPTO-ARSENAL TECHNOLOGY CO.）</div>
+                <div className="font-bold text-xl">UIUX Intern</div>
+                <div className="text-sm">CRYPTO-ARSENAL TECHNOLOGY CO.</div>
                 <div className="text-xs text-gray-400 mb-1">Feb 2024 - JUN 2024</div>
               </li>
             </ul>
@@ -159,7 +150,7 @@ const JourneySection = () => {
         </div>
         <div className="flex justify-center">
           <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
-            查看更多
+            See more
             <span className="inline-block transform translate-x-0.5">→</span>
           </button>
         </div>
@@ -259,10 +250,10 @@ const SkillSection = () => {
     <section className="w-full bg-white py-16 px-4 md:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <span className="block text-gray-500 italic mb-1">&ndash; 擅長工具</span>
+          <span className="block text-gray-500 italic mb-1">&ndash; My Favorite Tools</span>
           <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-blue-600 italic font-medium">用對的工具   </span>
-            <span className="text-black"> 完成對的任務</span>
+            <span className="text-blue-600 italic font-medium">Exploring the Tools </span>
+            <span className="text-black">Behind My Designs</span>
           </h2>
         </div>
         <div className="flex justify-between">
@@ -270,31 +261,31 @@ const SkillSection = () => {
           <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
             <FaFigma className="mb-4" size={48} color="#000"/>
             <span className="text-2xl font-bold mb-1">90%</span>
-            <span className="text-gray-500 font-bold">Figma</span>
-          </div>
-          {/* Tool 2: ReactJs */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaReact className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">80%</span>
-            <span className="text-gray-500 font-bold">ReactJs</span>
-          </div>
-          {/* Tool 3: NodeJs */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaNodeJs className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">60%</span>
-            <span className="text-gray-500 font-bold">NodeJs</span>
-          </div>
-          {/* Tool 4: Shopify */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaShopify className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">90%</span>
-            <span className="text-gray-500 font-bold">Shopify</span>
+            <span className="text-gray-500">Figma</span>
           </div>
           {/* Tool 5: VSCodes */}
           <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
             <VscVscode className="mb-4" size={48} color="#000"/>
             <span className="text-2xl font-bold mb-1">80%</span>
-            <span className="text-gray-500 font-bold">VSCode</span>
+            <span className="text-gray-500">VSCode</span>
+          </div>
+          {/* Tool 2: ReactJs */}
+          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
+            <FaReact className="mb-4" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">80%</span>
+            <span className="text-gray-500">ReactJs</span>
+          </div>
+          {/* Tool 3: NodeJs */}
+          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
+            <FaNodeJs className="mb-4" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">60%</span>
+            <span className="text-gray-500">NodeJs</span>
+          </div>
+          {/* Tool 4: Shopify */}
+          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
+            <FaShopify className="mb-4" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">90%</span>
+            <span className="text-gray-500">Shopify</span>
           </div>
         </div>
       </div>
