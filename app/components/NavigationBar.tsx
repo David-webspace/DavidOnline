@@ -13,6 +13,7 @@ export default function NavigationBar() {
           <Link href="/" className={pathname === "/" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>首頁</Link>
           <Link href="/about" className={pathname === "/about" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>關於我</Link>
           <Link href="/projects" className={pathname === "/projects" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>專案經驗</Link>
+          <Link href="/contact" className={pathname === "/contact" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>聯絡我</Link>
         </div>
         <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">聯絡我</Link>
       </nav>

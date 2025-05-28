@@ -1,10 +1,54 @@
 
+"use client";
 import { FaFigma, FaReact, FaNodeJs, FaShopify, FaInstagramSquare, FaFacebookSquare, FaLinkedin, FaBehanceSquare, FaGithubSquare } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
 import ScrollToTop from "./components/ScrollToTop";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef, useEffect, useState } from "react";
+
+type Clamp8LinesProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Clamp8Lines: React.FC<Clamp8LinesProps> = ({ children, className = "" }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [clampedText, setClampedText] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const el = ref.current;
+    const lineHeight = parseFloat(getComputedStyle(el).lineHeight || "24");
+    const maxHeight = lineHeight * 8;
+    let text = (typeof children === "string" ? children : el.textContent) || "";
+    el.textContent = text;
+    if (el.scrollHeight <= maxHeight) {
+      setClampedText(text);
+      return;
+    }
+    let low = 0, high = text.length, mid;
+    while (low < high) {
+      mid = Math.floor((low + high) / 2);
+      el.textContent = text.slice(0, mid) + "...";
+      if (el.scrollHeight > maxHeight) {
+        high = mid;
+      } else {
+        low = mid + 1;
+      }
+    }
+    setClampedText(text.slice(0, low - 1) + "...");
+    el.textContent = text;
+  }, [children]);
+
+  return (
+    <div ref={ref} className={className} style={{ overflow: "hidden" }}>
+      {clampedText}
+    </div>
+  );
+};
 
 const HeroSection =() => {
   return(
@@ -106,7 +150,7 @@ const JourneySection = () => {
     <section className="w-full bg-white py-16 px-4 md:px-0 text-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          學術與專業 <span className="text-blue-600">歷程</span>
+          學術與職涯 <span className="text-blue-600">歷程</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Education Card */}
@@ -156,12 +200,6 @@ const JourneySection = () => {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
-            查看更多
-            <span className="inline-block transform translate-x-0.5">→</span>
-          </button>
         </div>
       </div>
     </section>
@@ -302,6 +340,80 @@ const SkillSection = () => {
   )
 }
 
+const HeightLightSection = () => (
+  <section className="w-full bg-white py-16 px-4 md:px-0">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center text-blue-600 mb-10 tracking-widest">重要事項</h2>
+      <div className="flex justify-start mb-8">
+        <button className="bg-gray-800 text-gray-100 px-6 py-2 rounded hover:bg-gray-700 transition">查看更多</button>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Card 1 */}
+        
+        <Link href="/projects/nycugraduationrepresentative" className="hover:shadow-lg transition-shadow rounded-xl">
+          <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden">
+            <Image src="/graduation.jpg" alt="Update 1" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2024/06</div>
+            <div className="text-black font-bold text-xl mb-2">畢業典禮 在校生致詞</div>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">很榮幸有機會擔任畢業典禮的在校生致詞，我從大一剛入學其實在人際相處上有很大的障礙，但我也很願意改變，使自己不斷的進步，現在的我也相對更穩重多了。很謝謝各位願意相信我與支持我，我能夠站在台上很大部分也是因為我身邊的各位不斷地希望我變好，願意花超級多時間在我身上，我很感激! 我會帶著感恩的心一直往前走!</Clamp8Lines>
+            <div className="flex justify-end">
+              <span className="text-gray-400 text-2xl">→</span>
+            </div>
+          </div>
+        </Link>
+        {/* Card 2 */}
+        <Link href="/projects/bluegear2023" className="hover:shadow-lg transition-shadow rounded-xl">
+          <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden">
+            <Image src="/bluegear.png" alt="Update 2" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2023/12</div>
+            <div className="text-black font-bold text-xl mb-2">交大管理顧問社 2023</div>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">我積極參與校園活動，並在陽明交通大學管理顧問社中展現了行銷與創意的能力。期間，我提出了四項產品顧問提案，其中一項校園提案的行銷貼文在短短一夜間就獲得超過800個讚數，充分展現了我在行銷策略和創意表現上的實力。此外，我還與建築系合作，參與台東縣興隆國小的校園改善計畫。透過將設計理念轉化為實際成果，我成功為當地學生創造了更優質的學習環境，展現了跨領域合作與實務執行的能力。</Clamp8Lines>
+            <div className="flex justify-end">
+              <span className="text-gray-400 text-2xl">→</span>
+            </div>
+          </div>
+        </Link>
+        {/* Card 3 */}
+        <Link href="/projects/bat2022" className="hover:shadow-lg transition-shadow rounded-xl">
+          <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden">
+            <Image src="/bat2022.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2022/07</div>
+            <div className="text-black font-bold text-xl mb-2">交大國際志工團 BAT 2022</div>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">本志工活動主要是透過建築來傳達永續的概念，同時為當地創造新氣象。我們大家都不是建築相關背景，從0開始學習如何提案、概念發想，甚至也從頭開始學習使用建模軟體。我是其中建模軟體使用的最好的，最後大家也是延續我發想的提案，持續優化。同時我們也學習了木工技術，包含各種加工技巧，以便在未來可以順利製作出成品。在一切都規畫好之後，我們到了台東興隆國小，同時木材與工具等材料也運送過去，我們就直接開始了製作。作品名稱叫做「生生」，上面有許多的木箱以及集水通道，木箱中放有植物，實現自己自足的概念。同時整個建築像是一顆種子，有一個中空的空間，可以讓國小小朋友有個新的天下，增加校園的流動性。</Clamp8Lines>
+            <div className="flex justify-end">
+              <span className="text-gray-400 text-2xl">→</span>
+            </div>
+          </div>
+        </Link>
+        {/* Card 4 */}
+        <Link href="/projects/nccugolden2023" className="hover:shadow-lg transition-shadow rounded-xl">
+          <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden cursor-pointer">
+            <Image src="/nccu_golden.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2023/05</div>
+            <div className="text-black font-bold text-xl mb-2">政大金旋獎 2023</div>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</Clamp8Lines>
+            <div className="flex justify-end">
+              <span className="text-gray-400 text-2xl">→</span>
+            </div>
+          </div>
+        </Link>
+        {/* Card 5 */}
+        <Link href="/projects/meizhu2023" className="hover:shadow-lg transition-shadow rounded-xl">
+          <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden cursor-pointer">
+            <Image src="/fox.png" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2023/03</div>
+            <div className="text-black font-bold text-xl mb-2">清交梅竹大賽狐狸 2023</div>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</Clamp8Lines>
+            <div className="flex justify-end">
+              <span className="text-gray-400 text-2xl">→</span>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </div>
+  </section>
+)
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white relative">
@@ -318,7 +430,10 @@ export default function Home() {
       <JourneySection />
 
       {/* Blog Section */}
-      <BlogSection/>
+      {/* <BlogSection/> */}
+
+      {/* Highlight Section */}
+      <HeightLightSection/>
 
       {/* Tools Section */}
       <SkillSection/>

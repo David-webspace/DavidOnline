@@ -17,7 +17,7 @@ const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?:
   // Add more icons here as needed
 };
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about, skills, industries, benefits, images }) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, industries, benefits, images }) => {
   const [showAllImages, setShowAllImages] = useState(false);
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,9 +28,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about
       <section className="bg-blue-600 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
-            <Link href="/" className="hover:underline">Home</Link>
+            <Link href="/" className="hover:underline">首頁</Link>
             <span className="mx-2">&gt;</span>
-            <Link href="/projects" className="hover:underline">Projects</Link>
+            <Link href="/projects" className="hover:underline">專案經驗</Link>
             <span className="mx-2">&gt;</span>
             <span className="font-semibold">{title}</span>
           </nav>
@@ -54,13 +54,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, url, about
         <section className="mb-8">
           <div className="mb-4 flex justify-between items-end gap-2">
             <h2 className="text-5xl font-bold text-black">{title}</h2>
-            <Link
-              href={url}
-              className="text-blue-600 hover:underline text-sm font-semibold bg-blue-50 px-4 py-2 rounded shadow-sm hover:bg-blue-600 hover:text-white transition"
-              target="_blank"
-            >
-              {title}
-            </Link>
+            {category !== "Website" ? null : (
+              <Link
+                href={url}
+                className="text-blue-600 hover:underline text-sm font-semibold bg-blue-50 px-4 py-2 rounded shadow-sm hover:bg-blue-600 hover:text-white transition"
+                target="_blank"
+              >
+                {title}
+              </Link>
+            )}
           </div>
           {about.map((paragraph, i) => (
             <p key={i} className="text-gray-700 text-md leading-relaxed mb-3">{paragraph}</p>

@@ -6,6 +6,11 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   chuangchihhui: () => import("../../components/projects/chuangchihhui"),
   synopsyssemiconductorcamp: () =>
     import("../../components/projects/synopsys-semiconductorcamp"),
+  nycugraduationrepresentative: () =>
+    import("../../components/events/nycu-graduation-representitive"),
+  bluegear2023: () => import("../../components/events/bluegear-2023"),
+  bat2022: () => import("../../components/events/bat-2022"),
+  nccugolden2023: () => import("../../components/events/nccu-golden-2023"),
   // Add all your project files here
 };
 

@@ -30,13 +30,71 @@ const projects = [
     image: "Europa_Banner.png",
     tags: ["Shopify", "Ecommerce"],
   },
+  {
+    name: "NYCU Graduation Representative",
+    pathname : "nycu_graduation_representative",
+    image: "graduation.jpg",
+    tags: ["Events"],
+  },
+  {
+    name: "BlueGear 2023",
+    pathname : "bluegear_2023",
+    image: "bluegear.png",
+    tags: ["Events"],
+  },
+  {
+    name: "BAT 2022",
+    pathname : "bat_2022",
+    image: "bat2022.jpeg",
+    tags: ["Events"],
+  },
 ];
 
 function slugify(name: string) {
   return name.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 }
 
+import { useState } from "react";
+
+const categories = [
+  { label: "全部", value: "all" },
+  { label: "網站架設", value: "Web Development" },
+  { label: "電商網站", value: "Ecommerce" },
+  { label: "精選活動", value: "Events" },
+];
+
+function getProjectCategories(project: { tags: string[] }) {
+  if (project.tags.includes("Ecommerce")) return "Ecommerce";
+  if (project.tags.includes("Events")) return "Events";
+  return "Web Development";
+}
+
+function Tabs({ onChange, value }: { onChange: (val: string) => void; value: string }) {
+  const [selected, setSelected] = useState(value || "all");
+  const handleClick = (val: string) => {
+    setSelected(val);
+    if (onChange) onChange(val);
+  };
+  return (
+    <div className="flex gap-4 mb-8">
+      {categories.map((cat) => (
+        <button
+          key={cat.value}
+          className={`px-6 py-2 rounded-full font-semibold border transition text-sm ${selected === cat.value ? "bg-blue-600 text-white border-blue-600" : "bg-white text-blue-600 border-blue-600 hover:bg-blue-50"}`}
+          onClick={() => handleClick(cat.value)}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function ProjectsPage() {
+  const [tab, setTab] = useState("all");
+  const filteredProjects = tab === "all"
+    ? projects
+    : projects.filter(p => getProjectCategories(p) === tab);
   return (
     <div className="min-h-screen bg-gray-50">
 
@@ -47,7 +105,7 @@ export default function ProjectsPage() {
       <section className="bg-blue-600 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
-            <Link href="/" className="hover:underline">Home</Link> <span className="mx-2">&gt;</span> <span className="font-semibold">Projects</span>
+            <Link href="/" className="hover:underline">首頁</Link> <span className="mx-2">&gt;</span> <span className="font-semibold">專案經驗</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">PROJECTS</h1>
           {/* <div className="text-blue-200">Home &gt; Projects</div> */}
@@ -59,9 +117,11 @@ export default function ProjectsPage() {
         <h2 className="text-3xl font-bold mb-8">
           My <span className="text-blue-600">Projects</span>
         </h2>
+        {/* Tabs for categories */}
+        <Tabs onChange={setTab} value={tab} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Render project cards dynamically */}
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Link
               key={project.pathname}
               href={`/projects/${slugify(project.pathname)}`}
