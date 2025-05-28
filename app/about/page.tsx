@@ -22,7 +22,7 @@ const Clamp8Lines: React.FC<Clamp8LinesProps> = ({ children, className = "" }) =
     const el = ref.current;
     const lineHeight = parseFloat(getComputedStyle(el).lineHeight || "24");
     const maxHeight = lineHeight * 8;
-    let text = (typeof children === "string" ? children : el.textContent) || "";
+    const text = (typeof children === "string" ? children : el.textContent) || "";
     el.textContent = text;
     if (el.scrollHeight <= maxHeight) {
       setClampedText(text);

@@ -23,7 +23,7 @@ const Clamp8Lines: React.FC<Clamp8LinesProps> = ({ children, className = "" }) =
     const el = ref.current;
     const lineHeight = parseFloat(getComputedStyle(el).lineHeight || "24");
     const maxHeight = lineHeight * 8;
-    let text = (typeof children === "string" ? children : el.textContent) || "";
+    const text = (typeof children === "string" ? children : el.textContent) || "";
     el.textContent = text;
     if (el.scrollHeight <= maxHeight) {
       setClampedText(text);
@@ -202,92 +202,6 @@ const JourneySection = () => {
           </div>
         </div>
       </div>
-    </section>
-  )
-}
-
-const BlogSection = () => {
-  return(
-    <section className="w-full bg-white py-16 px-4 md:px-0">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <span className="block text-gray-500 italic mb-1">&ndash; Blogs</span>
-              <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="text-blue-600">Blog</span> <span className="text-black">My</span>
-              </h2>
-            </div>
-            <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
-              See More
-              <span className="inline-block transform translate-x-0.5">→</span>
-            </button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Main Blog Card */}
-            <div className="md:col-span-2 bg-gray-50 rounded-2xl p-0 shadow-sm overflow-hidden flex flex-col md:flex-row">
-              <Image src="https://images.pexels.com/photos/705792/pexels-photo-705792.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Main Blog" className="w-full md:w-2/3 h-60 md:h-auto object-cover" width={600} height={400} />
-              <div className="flex flex-col justify-between p-6 flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">RUNNING</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">10 Essential Tips For Beginner Runners: Start Your Running Journey Right</h3>
-                <div className="flex items-center gap-2 text-xs text-gray-400">
-                  <span>by Mike Chen</span>
-                  <span>•</span>
-                  <span>Oct 12, 2023</span>
-                </div>
-              </div>
-            </div>
-            {/* Blog List */}
-            <div className="flex flex-col gap-4">
-              {/* Blog Item 1 */}
-              <div className="bg-gray-50 rounded-2xl flex gap-4 p-3 shadow-sm hover:shadow-md transition">
-                <Image src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=100&q=80" alt="Blog 1" className="w-20 h-20 object-cover rounded-xl" width={100} height={100}/>
-                <div className="flex flex-col justify-between flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold">RACE</span>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">The Science Behind Running: How It Benefits You</h4>
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
-                    <span>by Lee Li</span>
-                    <span>•</span>
-                    <span>Oct 12, 2023</span>
-                  </div>
-                </div>
-              </div>
-              {/* Blog Item 2 */}
-              <div className="bg-gray-50 rounded-2xl flex gap-4 p-3 shadow-sm hover:shadow-md transition">
-                <Image src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=100&q=80" alt="Blog 2" className="w-20 h-20 object-cover rounded-xl" width={100} height={100}/>
-                <div className="flex flex-col justify-between flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold">RUNNING</span>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">From Couch To 5K: A Step-By-Step Guide To Becoming A Runner</h4>
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
-                    <span>by Mike Chen</span>
-                    <span>•</span>
-                    <span>Oct 12, 2023</span>
-                  </div>
-                </div>
-              </div>
-              {/* Blog Item 3 */}
-              <div className="bg-gray-50 rounded-2xl flex gap-4 p-3 shadow-sm hover:shadow-md transition">
-                <Image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=100&q=80" alt="Blog 3" className="w-20 h-20 object-cover rounded-xl" width={100} height={100}/>
-                <div className="flex flex-col justify-between flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold">RUNNING</span>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">The Best Running Shoes For Every Terrain, Find Your Fit</h4>
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
-                    <span>by Hannah Smith</span>
-                    <span>•</span>
-                    <span>Oct 12, 2023</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
     </section>
   )
 }
