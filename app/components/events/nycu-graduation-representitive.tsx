@@ -1,9 +1,9 @@
 import React from "react";
-import ProjectDetail from "../ProjectDetail";
+import EventDetail from "../EventDetail";
 
 export default function GraduationRepresentativeProject() {
   return (
-    <ProjectDetail
+    <EventDetail
       title="國立陽明交通大學 畢業典禮 在校生致詞代表"
       banner="/graduation.jpg"
       category="Event"

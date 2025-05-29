@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 export default function NavigationBar() {
     const pathname = usePathname();
     return(
-      <nav className="w-full flex items-center justify-between px-8 py-4 bg-white shadow-sm z-10">
-        <div className="flex items-center gap-2">
+      <nav className="w-full flex items-center justify-center px-8 py-6 bg-white shadow-sm z-10">
+        <div className="flex items-center gap-2 absolute left-10 top-4">
           <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl">JP</div>
         </div>
         <div className="flex items-center gap-8">
@@ -15,7 +15,7 @@ export default function NavigationBar() {
           <Link href="/projects" className={pathname === "/projects" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>專案經驗</Link>
           <Link href="/contact" className={pathname === "/contact" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>聯絡我</Link>
         </div>
-        <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">聯絡我</Link>
+        {/* <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">聯絡我</Link> */}
       </nav>
     )
 }

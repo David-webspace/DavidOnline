@@ -4,57 +4,11 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
 import ScrollToTop from "../components/ScrollToTop";
-
-const projects = [
-  {
-    name: "MUN Society Taiwan",
-    pathname : "mst",
-    image: "MST_Banner.png",
-    tags: ["Web Development", "UIUX Design"],
-  },
-  {
-    name: "Chuang Chih Hui",
-    pathname : "chuangchihhui",
-    image: "ChuangChihHui_Banner.jpg",
-    tags: ["Web Development", "ReactJs"],
-  },
-  {
-    name: "Synopsys X NCTU Alumin Semiconductor Camp",
-    pathname : "synopsys_semiconductorcamp",
-    image: "Semiconductorcamp.png",
-    tags: ["Web Development", "ReactJs", "UIUX Design"],
-  },
-  {
-    name: "Europa Eccommerce Website",
-    pathname : "europa",
-    image: "Europa_Banner.png",
-    tags: ["Shopify", "Ecommerce"],
-  },
-  {
-    name: "NYCU Graduation Representative",
-    pathname : "nycu_graduation_representative",
-    image: "graduation.jpg",
-    tags: ["Events"],
-  },
-  {
-    name: "BlueGear 2023",
-    pathname : "bluegear_2023",
-    image: "bluegear.png",
-    tags: ["Events"],
-  },
-  {
-    name: "BAT 2022",
-    pathname : "bat_2022",
-    image: "bat2022.jpeg",
-    tags: ["Events"],
-  },
-];
+import { useEffect, useState } from "react";
 
 function slugify(name: string) {
   return name.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 }
-
-import { useState } from "react";
 
 const categories = [
   { label: "全部", value: "all" },
@@ -91,10 +45,16 @@ function Tabs({ onChange, value }: { onChange: (val: string) => void; value: str
 }
 
 export default function ProjectsPage() {
-  const [tab, setTab] = useState("all");
+  const [tab, setTab] = useState<string>("all");
+  const [projects, setProjects] = useState<any[]>([]);
+  useEffect(() => {
+    fetch("/data/projects.json")
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
   const filteredProjects = tab === "all"
     ? projects
-    : projects.filter(p => getProjectCategories(p) === tab);
+    : projects.filter((p: any) => getProjectCategories(p) === tab);
   return (
     <div className="min-h-screen bg-gray-50">
 
@@ -107,7 +67,7 @@ export default function ProjectsPage() {
           <nav className="mb-4 text-sm text-blue-100">
             <Link href="/" className="hover:underline">首頁</Link> <span className="mx-2">&gt;</span> <span className="font-semibold">專案經驗</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">PROJECTS</h1>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">專案經驗</h1>
           {/* <div className="text-blue-200">Home &gt; Projects</div> */}
         </div>
       </section>
@@ -121,7 +81,7 @@ export default function ProjectsPage() {
         <Tabs onChange={setTab} value={tab} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Render project cards dynamically */}
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project: any) => (
             <Link
               key={project.pathname}
               href={`/projects/${slugify(project.pathname)}`}
@@ -129,11 +89,14 @@ export default function ProjectsPage() {
             >
               <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
               <div className="flex gap-2 mb-2">
-                {project.tags.map(tag => (
+                {project.tags.map((tag: string) => (
                   <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
                 ))}
               </div>
               <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
+              {project.time && (
+                <div className="text-md text-gray-500 mb-1">{project.time}</div>
+              )}
             </Link>
           ))}
         </div>

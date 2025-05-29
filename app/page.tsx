@@ -312,11 +312,11 @@ const HeightLightSection = () => (
           </div>
         </Link>
         {/* Card 5 */}
-        <Link href="/projects/meizhu2023" className="hover:shadow-lg transition-shadow rounded-xl">
+        <Link href="/projects/harvardwmun2024" className="hover:shadow-lg transition-shadow rounded-xl">
           <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden cursor-pointer">
-            <Image src="/fox.png" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
-            <div className="text-xs text-gray-400 mb-1">2023/03</div>
-            <div className="text-black font-bold text-xl mb-2">清交梅竹大賽狐狸 2023</div>
+            <Image src="/harvardwmun_2024_banner.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2024/03</div>
+            <div className="text-black font-bold text-xl mb-2">哈佛世傑模擬聯合國大會2024</div>
             <Clamp8Lines className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</Clamp8Lines>
             <div className="flex justify-end">
               <span className="text-gray-400 text-2xl">→</span>

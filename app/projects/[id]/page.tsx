@@ -11,7 +11,7 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   bluegear2023: () => import("../../components/events/bluegear-2023"),
   bat2022: () => import("../../components/events/bat-2022"),
   nccugolden2023: () => import("../../components/events/nccu-golden-2023"),
-  // Add all your project files here
+  harvardwmun2024: () => import("../../components/events/harvardwmun2024"),
 };
 
 interface PageProps {
