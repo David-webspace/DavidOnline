@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 // import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
+// import LanguageSelector from "./components/LanguageSelector";
 import "./globals.css";
+import LanguageSelector from "./components/LanguageSelector";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +21,6 @@ export const metadata: Metadata = {
 };
 
 
-import LanguageSelector from "./components/LanguageSelector";
 
 export default function RootLayout({
   children,
@@ -30,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 100 }}>
-          <LanguageSelector />
+          {/* <LanguageSelector /> */}
         </div>
         {children}
       </body>

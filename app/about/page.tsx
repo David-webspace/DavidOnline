@@ -172,7 +172,7 @@ const HeightLightSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Card 1 */}
         
-        <Link href="/about/heightlight/nycu-graduation-representitive" className="hover:shadow-lg transition-shadow rounded-xl">
+        <Link href="/projects/nycugraduationrepresentative" className="hover:shadow-lg transition-shadow rounded-xl">
           <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden">
             <Image src="/graduation.jpg" alt="Update 1" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
             <div className="text-xs text-gray-400 mb-1">2024/06</div>
@@ -184,7 +184,7 @@ const HeightLightSection = () => (
           </div>
         </Link>
         {/* Card 2 */}
-        <Link href="/about/heightlight/bluegear-2023" className="hover:shadow-lg transition-shadow rounded-xl">
+        <Link href="/projects/bluegear2023" className="hover:shadow-lg transition-shadow rounded-xl">
           <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden">
             <Image src="/bluegear.png" alt="Update 2" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
             <div className="text-xs text-gray-400 mb-1">2023/12</div>
@@ -196,7 +196,7 @@ const HeightLightSection = () => (
           </div>
         </Link>
         {/* Card 3 */}
-        <Link href="/about/heightlight/bat-2022" className="hover:shadow-lg transition-shadow rounded-xl">
+        <Link href="/projects/bat2022" className="hover:shadow-lg transition-shadow rounded-xl">
           <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden">
             <Image src="/bat2022.jpeg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
             <div className="text-xs text-gray-400 mb-1">2022/07</div>
@@ -208,7 +208,7 @@ const HeightLightSection = () => (
           </div>
         </Link>
         {/* Card 4 */}
-        <Link href="/about/heightlight/nccu-golden-2023" className="hover:shadow-lg transition-shadow rounded-xl">
+        <Link href="/projects/nccugolden2023" className="hover:shadow-lg transition-shadow rounded-xl">
           <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden cursor-pointer">
             <Image src="/nccu_golden.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
             <div className="text-xs text-gray-400 mb-1">2023/05</div>
@@ -220,11 +220,11 @@ const HeightLightSection = () => (
           </div>
         </Link>
         {/* Card 5 */}
-        <Link href="/about/heightlight/meizhu-2023" className="hover:shadow-lg transition-shadow rounded-xl">
+        <Link href="/projects/harvardwmun2024" className="hover:shadow-lg transition-shadow rounded-xl">
           <div className="bg-gray-50 rounded-xl p-6 shadow flex flex-col justify-between max-h-[480px] overflow-hidden cursor-pointer">
-            <Image src="/fox.png" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
-            <div className="text-xs text-gray-400 mb-1">2023/03</div>
-            <div className="text-black font-bold text-xl mb-2">清交梅竹大賽狐狸 2023</div>
+            <Image src="/harvardwmun_2024_banner.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
+            <div className="text-xs text-gray-400 mb-1">2024/03</div>
+            <div className="text-black font-bold text-xl mb-2">哈佛世傑模擬聯合國大會2024</div>
             <Clamp8Lines className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</Clamp8Lines>
             <div className="flex justify-end">
               <span className="text-gray-400 text-2xl">→</span>
@@ -244,7 +244,7 @@ export default function AboutPage() {
       <NavigationBar />
 
       {/* Top Banner */}
-      <section className="bg-blue-600 text-white py-12 px-4">
+      <section className="bg-blue-600 text-white py-12 md:mt-0 mt-6 px-4">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
             <Link href="/" className="hover:underline">首頁</Link> <span className="mx-2">&gt;</span> <span className="font-semibold">關於我</span>

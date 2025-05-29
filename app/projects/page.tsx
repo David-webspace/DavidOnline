@@ -34,7 +34,7 @@ function Tabs({ onChange, value }: { onChange: (val: string) => void; value: str
       {categories.map((cat) => (
         <button
           key={cat.value}
-          className={`px-6 py-2 rounded-full font-semibold border transition text-sm ${selected === cat.value ? "bg-blue-600 text-white border-blue-600" : "bg-white text-blue-600 border-blue-600 hover:bg-blue-50"}`}
+          className={`px-3 md:px-6 py-2 rounded-full font-semibold border transition text-ms ${selected === cat.value ? "bg-blue-600 text-white border-blue-600" : "bg-white text-blue-600 border-blue-600 hover:bg-blue-50"}`}
           onClick={() => handleClick(cat.value)}
         >
           {cat.label}
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
       <NavigationBar />
 
       {/* Top Banner */}
-      <section className="bg-blue-600 text-white py-12 px-4">
+      <section className="bg-blue-600 text-white py-12 md:mt-0 mt-6 px-4 z-10">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
             <Link href="/" className="hover:underline">首頁</Link> <span className="mx-2">&gt;</span> <span className="font-semibold">專案經驗</span>

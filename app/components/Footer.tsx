@@ -30,17 +30,15 @@ export default function Footer() {
               <div className="font-semibold text-blue-600 mb-2">Navigation</div>
               <nav className="flex flex-col gap-1 text-gray-700 text-sm">
                 <Link href="/">Home</Link>
-                <Link href="/services">Services</Link>
                 <Link href="/about">About</Link>
                 <Link href="/projects">Projects</Link>
-                <Link href="/blogs">Blogs</Link>
-                <Link href="/faqs">FAQs</Link>
+                <Link href="/contact">Contact</Link>
               </nav>
             </div>
             <div>
               <div className="font-semibold text-blue-600 mb-2">Contact</div>
               <div className="text-gray-700 text-sm mb-1">+886 970711698</div>
-              <div className="text-gray-700 text-sm mb-1">web.affabledavid5288@gmail.com</div>
+              <div className="text-gray-700 text-sm mb-1">billy890917@gmail.com</div>
             </div>
           </div>
 
