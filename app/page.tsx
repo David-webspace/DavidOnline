@@ -351,17 +351,7 @@ export default function Home() {
 
       {/* Tools Section */}
       <SkillSection/>
-
-      {/* Bottom Skill/Service Bar */}
-      <div className="fixed bottom-0 left-0 w-full bg-blue-600 text-white flex items-center justify-center gap-8 py-3 text-sm font-medium z-20">
-        <span>Digital Marketing</span>
-        <span className="mx-2">★</span>
-        <span>Website Development</span>
-        <span className="mx-2">★</span>
-        <span>UIUX Design</span>
-        <span className="mx-2">★</span>
-        <span>Email Marketing</span>
-      </div>
+      
       <Footer />
       <ScrollToTop />
     </div>
