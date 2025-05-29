@@ -44,9 +44,17 @@ function Tabs({ onChange, value }: { onChange: (val: string) => void; value: str
   );
 }
 
+type Project = {
+  name: string;
+  pathname: string;
+  image: string;
+  tags: string[];
+  time?: string;
+};
+
 export default function ProjectsPage() {
   const [tab, setTab] = useState<string>("all");
-  const [projects, setProjects] = useState<any[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
   useEffect(() => {
     fetch("/data/projects.json")
       .then((res) => res.json())
@@ -54,7 +62,7 @@ export default function ProjectsPage() {
   }, []);
   const filteredProjects = tab === "all"
     ? projects
-    : projects.filter((p: any) => getProjectCategories(p) === tab);
+    : projects.filter((p: Project) => getProjectCategories(p) === tab);
   return (
     <div className="min-h-screen bg-gray-50">
 
@@ -81,7 +89,7 @@ export default function ProjectsPage() {
         <Tabs onChange={setTab} value={tab} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Render project cards dynamically */}
-          {filteredProjects.map((project: any) => (
+          {filteredProjects.map((project: Project) => (
             <Link
               key={project.pathname}
               href={`/projects/${slugify(project.pathname)}`}

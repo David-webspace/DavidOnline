@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
 import ScrollToTop from "../components/ScrollToTop";
