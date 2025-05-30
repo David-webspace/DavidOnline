@@ -1,7 +1,6 @@
 
 "use client";
 import { FaFigma, FaReact, FaNodeJs, FaShopify, FaInstagramSquare, FaFacebookSquare, FaLinkedin, FaBehanceSquare, FaGithubSquare } from "react-icons/fa";
-import { VscVscode } from "react-icons/vsc";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
 import ScrollToTop from "./components/ScrollToTop";
@@ -370,12 +369,6 @@ const SkillSection = () => {
             <span className="text-2xl font-bold mb-1">90%</span>
             <span className="text-gray-500 font-bold">Shopify</span>
           </div>
-          {/* Tool 5: VSCodes
-          <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
-            <VscVscode className="md:mb-4 mb-0" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">80%</span>
-            <span className="text-gray-500 font-bold">VSCode</span>
-          </div> */}
         </div>
       </div>
     </section>
