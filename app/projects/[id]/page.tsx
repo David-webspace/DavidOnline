@@ -1,3 +1,4 @@
+import ScrollToTop from "@/app/components/ScrollToTop";
 import { notFound } from "next/navigation";
 
 const components: Record<string, () => Promise<{ default: React.ComponentType<object> }>> = {
@@ -29,7 +30,12 @@ const Page = async ({ params }: PageProps) => {
 
   const ProjectComponent = (await importComponent()).default;
 
-  return <ProjectComponent />;
+  return (
+    <>
+      <ProjectComponent />
+      <ScrollToTop />
+    </>
+  );
 };
 
 export default Page;
