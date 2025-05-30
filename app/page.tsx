@@ -329,8 +329,17 @@ const HeightLightSection = () => (
 )
 
 // ProjectsPreview: shows up to 4 projects as cards, with a 'View All Projects' button
+type Project = {
+  name: string;
+  pathname: string;
+  image: string;
+  tags: string[];
+  category: string[];
+  time?: string;
+};
+
 function ProjectsPreview() {
-  const [projects, setProjects] = useState<any[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
   useEffect(() => {
     fetch("/data/projects.json")
       .then((res) => res.json())
