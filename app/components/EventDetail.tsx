@@ -18,7 +18,7 @@ const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?:
   // Add more icons here as needed
 };
 
-const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, industries, benefits, images }) => {
+const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, benefits, images }) => {
   const [showAllImages, setShowAllImages] = useState(false);
   return (
     <div className="min-h-screen bg-gray-50">
@@ -121,7 +121,6 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
             )}
           </>
         )}
-
       </div>
 
       {/* Footer */}

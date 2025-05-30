@@ -18,7 +18,7 @@ const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?:
   // Add more icons here as needed
 };
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, industries, benefits, images }) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, url, about, skills, benefits, images }) => {
   const [showAllImages, setShowAllImages] = useState(false);
   return (
     <div className="min-h-screen bg-gray-50">
@@ -122,17 +122,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, 
           </>
         )}
 
-        {/* Industries */}
-        {/* <section className="mb-8">
-          <h3 className="font-semibold mb-2 text-black">Top Industries I Cover in App Design</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
-            {industries.map((industry, i) => (
-              <div key={i} className="bg-gray-50 text-black p-2 rounded-lg border flex items-center gap-2">
-                <span className="text-black">🏷️</span> {industry}
-              </div>
-            ))}
-          </div>
-        </section> */}
       </div>
 
       {/* Footer */}
