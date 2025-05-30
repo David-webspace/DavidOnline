@@ -100,7 +100,7 @@ const JourneySection = () => {
   return(
     <section className="w-full bg-white py-16 px-4 md:px-0 text-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-start mb-10">
           學術與職涯 <span className="text-blue-600">歷程</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -176,7 +176,7 @@ function ProjectsPreview() {
   }, []);
   return (
     <section className="max-w-6xl mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold mb-8">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">
         精選 <span className="text-blue-600">專案</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -212,8 +212,10 @@ function ProjectsPreview() {
 const HeightLightSection = () => (
   <section className="w-full bg-white py-16 px-4 md:px-0">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold text-start text-blue-600 mb-10 tracking-widest">重要事項</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">
+        重要 <span className="text-blue-600">事項</span>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         {/* Card 1 */}
         
         <Link href="/projects/nycugraduationrepresentative" className="hover:shadow-lg transition-shadow rounded-xl">
@@ -291,11 +293,9 @@ const ServiceSection = () => {
     <section className="w-full bg-white py-16 px-4 md:px-0">
     <div className="max-w-6xl mx-auto">
     <div className="flex items-center justify-between mb-10">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="text-black">提供的</span> <span className="text-blue-600">服務</span>
-        </h2>
-      </div>
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">
+        提供的 <span className="text-blue-600">服務</span>
+      </h2>
       {/* <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
         查看更多
         <span className="inline-block transform translate-x-0.5">→</span>
@@ -340,10 +340,9 @@ const SkillSection = () => {
     <section className="w-full bg-white py-16 px-4 md:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <span className="block text-gray-500 italic mb-1">&ndash; 擅長工具</span>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-blue-600 italic font-medium">用對的工具   </span>
-            <span className="text-black"> 完成對的任務</span>
+          {/* <span className="block text-gray-500 italic mb-1">&ndash; 擅長工具</span> */}
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-start">
+            擅長 <span className="text-blue-600">工具</span>
           </h2>
         </div>
         <div className="flex flex-col md:flex-row justify-between">
