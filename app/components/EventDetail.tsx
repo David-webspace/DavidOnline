@@ -41,7 +41,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
 
       <div className="max-w-6xl mx-auto py-10 px-4">
         {/* Image Banner */}
-        <div className="mb-6 w-full h-[600px] bg-red-100 flex justify-center items-center overflow-hidden rounded-xl">
+        <div className="mb-6 w-full h-[600px] flex justify-center items-center overflow-hidden rounded-xl">
           <Image
             src={banner}
             alt={title}

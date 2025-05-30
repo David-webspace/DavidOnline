@@ -4,7 +4,7 @@ import ProjectDetail from "../ProjectDetail";
 export default function MSTProject() {
   return (
     <ProjectDetail
-      title="MUN Society Taiwan"
+      title="台灣模擬聯合國學會"
       banner="/MST_Banner.png"
       category="Website"
       url="https://munsoc.tw/"
