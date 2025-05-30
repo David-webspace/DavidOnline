@@ -26,7 +26,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
       <NavigationBar />
 
       {/* Top Banner */}
-      <section className="bg-blue-600 text-white py-12 px-4">
+      <section className="bg-blue-600 text-white py-12 md:mt-0 mt-6 px-4 z-10">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
             <Link href="/" className="hover:underline">首頁</Link>
@@ -41,13 +41,13 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
 
       <div className="max-w-6xl mx-auto py-10 px-4">
         {/* Image Banner */}
-        <div className="mb-6 w-full h-[600px] flex justify-center items-center overflow-hidden rounded-xl">
+        <div className="mb-6 w-full md:h-[600px] flex justify-center items-center overflow-hidden rounded-xl">
           <Image
             src={banner}
             alt={title}
             width={800}
             height={400}
-            className="w-full object-cover mb-4"
+            className="rounded-xl w-full object-cover mb-4"
           />
         </div>
         

@@ -26,7 +26,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, 
       <NavigationBar />
 
       {/* Top Banner */}
-      <section className="bg-blue-600 text-white py-12 px-4">
+      <section className="bg-blue-600 text-white py-12 md:mt-0 mt-6 px-4 z-10">
         <div className="max-w-6xl mx-auto">
           <nav className="mb-4 text-sm text-blue-100">
             <Link href="/" className="hover:underline">首頁</Link>
