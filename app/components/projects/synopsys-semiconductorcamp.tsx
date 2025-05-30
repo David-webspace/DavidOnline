@@ -4,22 +4,18 @@ import ProjectDetail from "../ProjectDetail";
 export default function SynopsysSemiconductorCampProject() {
   return (
     <ProjectDetail
-      title="Synopsys X NCTU Alumin Semiconductor Camp"
+      title="新思科技Ｘ交大校友會 半導體營隊官網"
       banner="/Semiconductorcamp.png"
       category="Website"
       url="https://semiconductorcamp.com/"
       about={[
-        "I was honored to lead the Synopsys X NCTU Alumin Semiconductor Camp project as the CTO. I single-handedly designed and developed the official website from scratch, ensuring it met modern usability and design standards. I also co-organized the camp with Synopsys, a leading semiconductor company, which was a milestone achievement for the organization.",
-        "The Synopsys X NCTU Alumin Semiconductor Camp is a cross-campus organization established in 2021 to promote Model United Nations (MUN) activities in Taiwan. It connects MUN enthusiasts, organizes conferences like the Taiwan International Model United Nations (TIMUN), and provides resources to enhance students' international awareness and leadership skills. MST has represented Taiwan at global events, such as WorldMUN Paris in 2023, and hosted large-scale conferences in collaboration with educational and research organizations."
+        "感謝總召邀請我一起參與這類型的活動，去年我也有參與這個營隊活動，在某個環節中必須對高中生們分享一些我對於人生探索這件事情的想法。今年有幸能為學校貢獻心力，提升活動品質。",
+        "此網站為我一人獨自開發，使用ReactJs + TailwindCss 完成。網站中首頁一開始以動畫進場，點擊之後方會進到官網主頁。主頁中會有活動介紹、營隊特色等資訊。"
       ]}
       skills={[
         {
           name: "ReactJs",
           icon: "SiReact",
-        },
-        {
-          name: "NextJs",
-          icon: "SiNextdotjs",
         },
         {
           name: "TypeScript",
@@ -28,10 +24,6 @@ export default function SynopsysSemiconductorCampProject() {
         {
           name: "TailwindCSS",
           icon: "SiTailwindcss",
-        },
-        {
-          name: "Figma",
-          icon: "SiFigma",
         },
       ]}
       industries={[
@@ -43,7 +35,7 @@ export default function SynopsysSemiconductorCampProject() {
         "UIUX Design",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
+        "陳列活動相關時程、報名資訊、線上資源等，以及報名表單",
         "Collaborated with international organizations like Harvard University to organize large-scale events.",
         "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
         "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."

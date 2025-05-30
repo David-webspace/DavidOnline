@@ -328,6 +328,46 @@ const HeightLightSection = () => (
   </section>
 )
 
+// ProjectsPreview: shows up to 4 projects as cards, with a 'View All Projects' button
+function ProjectsPreview() {
+  const [projects, setProjects] = useState<any[]>([]);
+  useEffect(() => {
+    fetch("/data/projects.json")
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
+  return (
+    <section className="max-w-6xl mx-auto py-12 px-4">
+      <h2 className="text-3xl font-bold mb-8">
+        精選 <span className="text-blue-600">專案</span>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        {projects.slice(0, 4).map((project) => (
+          <Link
+            key={project.pathname}
+            href={`/projects/${project.pathname}`}
+            className="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition"
+          >
+            <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
+            <div className="flex gap-2 mb-2">
+              {project.tags?.map((tag: string) => (
+                <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
+              ))}
+            </div>
+            <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
+            {project.time && (
+              <div className="text-md text-gray-500 mb-1">{project.time}</div>
+            )}
+          </Link>
+        ))}
+      </div>
+      <div className="flex justify-end">
+        <Link href="/projects" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">查看所有專案</Link>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white relative">
@@ -337,17 +377,17 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection/>
 
-      {/* Services Section */}
-      <ServiceSection/>
-
       {/* Academic & Professional Journey Section */}
       <JourneySection />
 
-      {/* Blog Section */}
-      {/* <BlogSection/> */}
+      {/* Projects Preview Section */}
+      <ProjectsPreview />
 
       {/* Highlight Section */}
       <HeightLightSection/>
+
+      {/* Services Section */}
+      <ServiceSection/>
 
       {/* Tools Section */}
       <SkillSection/>

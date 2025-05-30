@@ -4,14 +4,14 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   mst: () => import("../../components/projects/mst"),
   europa: () => import("../../components/projects/europa"),
   chuangchihhui: () => import("../../components/projects/chuangchihhui"),
-  synopsyssemiconductorcamp: () =>
-    import("../../components/projects/synopsys-semiconductorcamp"),
-  nycugraduationrepresentative: () =>
-    import("../../components/events/nycu-graduation-representitive"),
+  synopsyssemiconductorcamp: () => import("../../components/projects/synopsys-semiconductorcamp"),
+  nycugraduationrepresentative: () => import("../../components/events/nycu-graduation-representitive"),
   bluegear2023: () => import("../../components/events/bluegear-2023"),
   bat2022: () => import("../../components/events/bat-2022"),
   nccugolden2023: () => import("../../components/events/nccu-golden-2023"),
   harvardwmun2024: () => import("../../components/events/harvardwmun2024"),
+  artisdivoce: () => import("../../components/projects/artisdivoce"),
+  rosehip: () => import("../../components/projects/rosehip"),
 };
 
 interface PageProps {

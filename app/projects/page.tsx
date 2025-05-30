@@ -13,13 +13,13 @@ function slugify(name: string) {
 const categories = [
   { label: "全部", value: "all" },
   { label: "網站架設", value: "Web Development" },
-  { label: "電商網站", value: "Ecommerce" },
+  { label: "電商平台", value: "Ecommerce" },
   { label: "精選活動", value: "Events" },
 ];
 
-function getProjectCategories(project: { tags: string[] }) {
-  if (project.tags.includes("Ecommerce")) return "Ecommerce";
-  if (project.tags.includes("Events")) return "Events";
+function getProjectCategories(project: { category: string[] }) {
+  if (project.category.includes("Ecommerce")) return "Ecommerce";
+  if (project.category.includes("Events")) return "Events";
   return "Web Development";
 }
 
@@ -49,6 +49,7 @@ type Project = {
   pathname: string;
   image: string;
   tags: string[];
+  category: string[];
   time?: string;
 };
 

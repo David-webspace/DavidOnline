@@ -3,63 +3,72 @@
         "name": "台灣模擬聯合國學會官網",
         "pathname": "mst",
         "image": "MST_Banner.png",
-        "tags": ["Web Development","UIUX Design"],
+        "tags": ["網站架設","UIUX Design"],
+        "category": ["Web Development","UIUX Design"],
         "time": "2023/12-2024/05"
     },
     {
         "name": "莊志輝藝術作品官網",
         "pathname": "chuangchihhui",
         "image": "ChuangChihHui_Banner.jpg",
-        "tags": ["Web Development","ReactJs"],
+        "tags": ["網站架設","ReactJs"],
+        "category": ["Web Development","ReactJs"],
         "time": "2024/12-2025/05"
     },
     {
         "name": "新思科技Ｘ交大校友會半導體營隊官網",
         "pathname": "synopsys_semiconductorcamp",
         "image": "Semiconductorcamp.png",
-        "tags": ["Web Development","ReactJs","UIUX Design"],
+        "tags": ["網站架設","ReactJs","UIUX Design"],
+        "category": ["Web Development","ReactJs","UIUX Design"],
         "time": "2025/01-2025/04"
     },
     {
         "name": "歐台思路國際網卡電商平台",
         "pathname": "europa",
         "image": "Europa_Banner.png",
-        "tags": ["Shopify","Ecommerce"],
+        "tags": ["Shopify","電商平台"],
+        "category": ["Shopify","Ecommerce"],
         "time": "2025/04"
     },
     {
         "name": "陽明交通大學2023畢業典禮 在校生代表",
         "pathname": "nycu_graduation_representative",
         "image": "graduation.jpg",
-        "tags": ["Events"],
+        "tags": ["里程碑"],
+        "category": ["Events"],
         "time": "2023/06"
     },
     {
         "name": "交大管理顧問社 2023",
         "pathname": "bluegear_2023",
         "image": "bluegear.png",
-        "tags": ["Events"],
+        "tags": ["社團參與"],
+        "category": ["Events"],
         "time": "2022/09-2023/06"
     },
     {
         "name": "交大國際志工（BAT） 2022",
         "pathname": "bat_2022",
         "image": "bat2022.jpeg",
-        "tags": ["Events"],
+        "tags": ["社團參與"],
+        "category": ["Events"],
         "time": "2021/09-2022/06"
     },
     {
         "name": "樂雅寵物電商網站",
         "pathname": "rosehip",
         "image": "rosehip_banner.jpeg",
-        "tags": ["Web Development","Shopify", "Ecommerce"],
+        "tags": ["Shopify", "電商平台"],
+        "category": ["Shopify", "Ecommerce"],
         "time": "2025/04"
     },
     {
         "name": "娜拉波 Artis di Voce",
         "pathname": "artisdiVoce",
         "image": "artisdivoce_banner.webp",
-        "tags": ["Web Development","Shopify", "Ecommerce"],
+        "tags": ["Shopify", "電商平台"],
+        "category": ["Shopify", "Ecommerce"],
         "time": "2025/04"
     }
 ]
