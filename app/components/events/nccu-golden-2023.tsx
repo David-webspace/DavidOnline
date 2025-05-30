@@ -1,12 +1,12 @@
 import React from "react";
-import ProjectDetail from "../ProjectDetail";
+import EventDetail from "../EventDetail";
 
 export default function NCCUGolden2023Project() {
   return (
-    <ProjectDetail
+    <EventDetail
       title="NCCU Golden 2023"
-      banner="/nccu_golden.jpg"
-      category="Website"
+      banner="/nccu_gold_sing.jpg"
+      category="Event"
       url=""
       about={[
         ""
@@ -32,11 +32,10 @@ export default function NCCUGolden2023Project() {
         "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
       ]}
       images={[
-        "/mst_welcome.jpg",
-        "/mst_ceremony.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg"
+        "/nccu_gold_sing.jpg",
+        "/nccu_gold_celebrity.jpg",
+        "/nccu_gold_song.jpg",
+        "/nccu_door.jpg",
       ]}
     />
   );

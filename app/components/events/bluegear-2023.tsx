@@ -31,13 +31,7 @@ export default function BlueGear2023Project() {
         "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
         "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
       ]}
-      images={[
-        "/mst_welcome.jpg",
-        "/mst_ceremony.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg"
-      ]}
+      images={[]}
     />
   );
 }
