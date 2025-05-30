@@ -70,5 +70,21 @@
         "tags": ["Shopify", "電商平台"],
         "category": ["Shopify", "Ecommerce"],
         "time": "2025/04"
+    },
+    {
+        "name": "哈佛世界模擬聯合國大會 2024",
+        "pathname": "harvardwmun2024",
+        "image": "harvardwmun_2024_banner.jpg",
+        "tags": ["模擬聯合國 MUN","網站架設","公關"],
+        "category": ["Events"],
+        "time": "2024/03"
+    },
+    {
+        "name": "政大金旋獎",
+        "pathname": "nccugolden2023",
+        "image": "nccu_gold_sing.jpg",
+        "tags": ["模擬聯合國 MUN","網站架設","公關"],
+        "category": ["Events"],
+        "time": "2023/04"
     }
 ]
