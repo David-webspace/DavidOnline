@@ -96,55 +96,6 @@ const HeroSection =() => {
   )
 }
 
-const ServiceSection = () => {
-  return (
-    <section className="w-full bg-white py-16 px-4 md:px-0">
-    <div className="max-w-6xl mx-auto">
-    <div className="flex items-center justify-between mb-10">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="text-black">提供的</span> <span className="text-blue-600">服務</span>
-        </h2>
-      </div>
-      <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
-        查看更多
-        <span className="inline-block transform translate-x-0.5">→</span>
-      </button>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {/* Card 1 */}
-      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
-          <Image src="/website.svg" alt="Website" width={64} height={64}/>
-        </div>
-        <h3 className="text-lg font-semibold text-black mb-2">網站開發</h3>
-        <p className="text-gray-500 text-sm mb-2">建立功能完整、引人入勝且使用者友好的網站。</p>
-        <p className="text-gray-500 text-sm mb-2">提供跨境支付流程和本地物流整合。</p>
-        <p className="text-gray-500 text-sm mb-2">綁定域名並建立電子商務後台。</p>
-      </div>
-      {/* Card 2 */}
-      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
-          <Image src="/wireframe.svg" alt="Wireframe" width={64} height={64}/>
-        </div>
-        <h3 className="text-lg font-semibold text-black mb-2">UIUX設計</h3>
-        <p className="text-gray-500 text-sm mb-2">直覺且使用者友好的設計：設計應簡單且清晰，使使用者能夠快速開始並高效完成任務。</p>
-        <p className="text-gray-500 text-sm mb-2">解決使用者的痛點，幫助實現目標，並提供實用的價值。</p>
-        <p className="text-gray-500 text-sm mb-2">建立積極的互動和情感聯繫，增強使用者的滿意度和忠誠度。</p>
-      </div>
-      {/* Card 3 */}
-      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
-        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
-          <Image src="/communication.svg" alt="Communication" width={64} height={64}/>
-        </div>
-        <h3 className="text-lg font-semibold text-black mb-2">高效率的溝通能力</h3>
-        <p className="text-gray-500 text-sm">溝通需求、建立信任、促進內部和外部合作，以實現價值創造</p>
-      </div>
-    </div>
-    </div>
-  </section>
-)}
-
 const JourneySection = () => {
   return(
     <section className="w-full bg-white py-16 px-4 md:px-0 text-black">
@@ -206,61 +157,62 @@ const JourneySection = () => {
   )
 }
 
-const SkillSection = () => {
-  return(
-    <section className="w-full bg-white py-16 px-4 md:px-0">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="block text-gray-500 italic mb-1">&ndash; 擅長工具</span>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-blue-600 italic font-medium">用對的工具   </span>
-            <span className="text-black"> 完成對的任務</span>
-          </h2>
-        </div>
-        <div className="flex justify-between">
-          {/* Tool 1: Figma */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaFigma className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">90%</span>
-            <span className="text-gray-500 font-bold">Figma</span>
-          </div>
-          {/* Tool 2: ReactJs */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaReact className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">80%</span>
-            <span className="text-gray-500 font-bold">ReactJs</span>
-          </div>
-          {/* Tool 3: NodeJs */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaNodeJs className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">60%</span>
-            <span className="text-gray-500 font-bold">NodeJs</span>
-          </div>
-          {/* Tool 4: Shopify */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <FaShopify className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">90%</span>
-            <span className="text-gray-500 font-bold">Shopify</span>
-          </div>
-          {/* Tool 5: VSCodes */}
-          <div className="flex flex-col items-center bg-gray-50 rounded-full py-8 px-4 w-1/6 shadow-sm">
-            <VscVscode className="mb-4" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">80%</span>
-            <span className="text-gray-500 font-bold">VSCode</span>
-          </div>
-        </div>
+// ProjectsPreview: shows up to 4 projects as cards, with a 'View All Projects' button
+type Project = {
+  name: string;
+  pathname: string;
+  image: string;
+  tags: string[];
+  category: string[];
+  time?: string;
+};
+
+function ProjectsPreview() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  useEffect(() => {
+    fetch("/data/projects.json")
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
+  return (
+    <section className="max-w-6xl mx-auto py-12 px-4">
+      <h2 className="text-3xl font-bold mb-8">
+        精選 <span className="text-blue-600">專案</span>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        {projects.slice(0, 4).map((project) => (
+          <Link
+            key={project.pathname}
+            href={`/projects/${project.pathname}`}
+            className="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition"
+          >
+            <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
+            <div className="flex gap-2 mb-2">
+              {project.tags?.map((tag: string) => (
+                <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
+              ))}
+            </div>
+            <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
+            {project.time && (
+              <div className="text-md text-gray-500 mb-1">{project.time}</div>
+            )}
+          </Link>
+        ))}
+      </div>
+      <div className="flex justify-end">
+        <Link href="/projects" className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
+          查看更多
+          <span className="inline-block transform translate-x-0.5">→</span>
+        </Link>
       </div>
     </section>
-  )
+  );
 }
 
 const HeightLightSection = () => (
   <section className="w-full bg-white py-16 px-4 md:px-0">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center text-blue-600 mb-10 tracking-widest">重要事項</h2>
-      <div className="flex justify-start mb-8">
-        <button className="bg-gray-800 text-gray-100 px-6 py-2 rounded hover:bg-gray-700 transition">查看更多</button>
-      </div>
+      <h2 className="text-3xl font-bold text-start text-blue-600 mb-10 tracking-widest">重要事項</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Card 1 */}
         
@@ -324,57 +276,111 @@ const HeightLightSection = () => (
           </div>
         </Link>
       </div>
+      <div className="flex justify-end">
+        <Link href="/about" className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
+          查看更多
+          <span className="inline-block transform translate-x-0.5">→</span>
+        </Link>
+      </div>
     </div>
   </section>
 )
 
-// ProjectsPreview: shows up to 4 projects as cards, with a 'View All Projects' button
-type Project = {
-  name: string;
-  pathname: string;
-  image: string;
-  tags: string[];
-  category: string[];
-  time?: string;
-};
-
-function ProjectsPreview() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  useEffect(() => {
-    fetch("/data/projects.json")
-      .then((res) => res.json())
-      .then((data) => setProjects(data));
-  }, []);
+const ServiceSection = () => {
   return (
-    <section className="max-w-6xl mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold mb-8">
-        精選 <span className="text-blue-600">專案</span>
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        {projects.slice(0, 4).map((project) => (
-          <Link
-            key={project.pathname}
-            href={`/projects/${project.pathname}`}
-            className="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition"
-          >
-            <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
-            <div className="flex gap-2 mb-2">
-              {project.tags?.map((tag: string) => (
-                <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
-              ))}
-            </div>
-            <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
-            {project.time && (
-              <div className="text-md text-gray-500 mb-1">{project.time}</div>
-            )}
-          </Link>
-        ))}
+    <section className="w-full bg-white py-16 px-4 md:px-0">
+    <div className="max-w-6xl mx-auto">
+    <div className="flex items-center justify-between mb-10">
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold">
+          <span className="text-black">提供的</span> <span className="text-blue-600">服務</span>
+        </h2>
       </div>
-      <div className="flex justify-end">
-        <Link href="/projects" className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">查看所有專案</Link>
+      {/* <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition">
+        查看更多
+        <span className="inline-block transform translate-x-0.5">→</span>
+      </button> */}
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Card 1 */}
+      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
+        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
+          <Image src="/website.svg" alt="Website" width={64} height={64}/>
+        </div>
+        <h3 className="text-lg font-semibold text-black mb-2">網站開發</h3>
+        <p className="text-gray-500 text-sm mb-2">建立功能完整、引人入勝且使用者友好的網站。</p>
+        <p className="text-gray-500 text-sm mb-2">提供跨境支付流程和本地物流整合。</p>
+        <p className="text-gray-500 text-sm mb-2">綁定域名並建立電子商務後台。</p>
+      </div>
+      {/* Card 2 */}
+      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
+        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
+          <Image src="/wireframe.svg" alt="Wireframe" width={64} height={64}/>
+        </div>
+        <h3 className="text-lg font-semibold text-black mb-2">UIUX設計</h3>
+        <p className="text-gray-500 text-sm mb-2">直覺且使用者友好的設計：設計應簡單且清晰，使使用者能夠快速開始並高效完成任務。</p>
+        <p className="text-gray-500 text-sm mb-2">解決使用者的痛點，幫助實現目標，並提供實用的價值。</p>
+        <p className="text-gray-500 text-sm mb-2">建立積極的互動和情感聯繫，增強使用者的滿意度和忠誠度。</p>
+      </div>
+      {/* Card 3 */}
+      <div className="bg-gray-50 rounded-2xl p-8 shadow-sm flex flex-col items-start hover:shadow-md transition">
+        <div className="bg-blue-100 text-blue-600 rounded-full p-5 mb-4">
+          <Image src="/communication.svg" alt="Communication" width={64} height={64}/>
+        </div>
+        <h3 className="text-lg font-semibold text-black mb-2">高效率的溝通能力</h3>
+        <p className="text-gray-500 text-sm">溝通需求、建立信任、促進內部和外部合作，以實現價值創造</p>
+      </div>
+    </div>
+    </div>
+  </section>
+)}
+
+const SkillSection = () => {
+  return(
+    <section className="w-full bg-white py-16 px-4 md:px-0">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <span className="block text-gray-500 italic mb-1">&ndash; 擅長工具</span>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span className="text-blue-600 italic font-medium">用對的工具   </span>
+            <span className="text-black"> 完成對的任務</span>
+          </h2>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between">
+          {/* Tool 1: Figma */}
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full md:py-8 py-4 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <FaFigma className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">90%</span>
+            <span className="text-gray-500 font-bold">Figma</span>
+          </div>
+          {/* Tool 2: ReactJs */}
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <FaReact className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">80%</span>
+            <span className="text-gray-500 font-bold">ReactJs</span>
+          </div>
+          {/* Tool 3: NodeJs */}
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <FaNodeJs className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">60%</span>
+            <span className="text-gray-500 font-bold">NodeJs</span>
+          </div>
+          {/* Tool 4: Shopify */}
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <FaShopify className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">90%</span>
+            <span className="text-gray-500 font-bold">Shopify</span>
+          </div>
+          {/* Tool 5: VSCodes
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <VscVscode className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">80%</span>
+            <span className="text-gray-500 font-bold">VSCode</span>
+          </div> */}
+        </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default function Home() {
