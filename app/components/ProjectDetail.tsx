@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 
 interface ProjectDetailProps { title: string; banner: string; category: string; url: string; about: string[]; skills: { name: string; icon: string }[]; industries: string[]; benefits: string[]; images: string[]; }
 
@@ -71,7 +72,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, 
 
           {/* Benefits */}
           <section className="mb-8">
-          <h3 className="font-semibold mb-2 text-xl text-black">Services Benefits:</h3>
+          <h3 className="font-semibold mb-2 text-xl text-black">服務項目涵蓋:</h3>
           <ul className="list-disc pl-5 text-md text-gray-700">
             {benefits.map((benefit, i) => (
               <li key={i}>{benefit}</li>
@@ -81,7 +82,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, 
 
         {/* Skills */}
         <section className="mb-8">
-          <h3 className="font-semibold mb-2 text-xl text-black">Skills Include:</h3>
+          <h3 className="font-semibold mb-2 text-xl text-black">技能涵蓋:</h3>
           <ul className="grid grid-cols-2 md:grid-cols-6 gap-2 text-sm">
             {skills.map((skill, i) => (
               <li key={i} className="flex items-center gap-2 text-gray-700 text-lg">
@@ -95,7 +96,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, 
         {/* Image */}
         {images && images.length > 0 && (
           <>
-            <h3 className="font-semibold mb-2 text-xl text-black">Project Photos: </h3>
+            <h3 className="font-semibold mb-2 text-xl text-black">專案照片: </h3>
             <section className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               {(showAllImages ? images : images.slice(0, 3)).map((img, i) => (
                 <Image
@@ -122,17 +123,20 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, 
         )}
 
         {/* Industries */}
-        <section className="mb-8">
-          <h3 className="font-semibold mb-2">Top Industries I Cover in App Design</h3>
+        {/* <section className="mb-8">
+          <h3 className="font-semibold mb-2 text-black">Top Industries I Cover in App Design</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
             {industries.map((industry, i) => (
-              <div key={i} className="bg-gray-50 p-2 rounded-lg border flex items-center gap-2">
+              <div key={i} className="bg-gray-50 text-black p-2 rounded-lg border flex items-center gap-2">
                 <span className="text-black">🏷️</span> {industry}
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
 
   );

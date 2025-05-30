@@ -9,8 +9,7 @@ export default function EuropaProject() {
       category="Website"
       url="https://www.euro168168.com/"
       about={[
-        "Europa is an e-commerce platform that offers a wide range of products, including cosmetics, skincare, and beauty products. The platform is designed to provide a seamless shopping experience for customers, with features such as a user-friendly interface, secure payment processing, and easy product search. The platform is built using Shopify, a popular e-commerce platform, and is optimized for mobile devices, ensuring that customers can shop on the go.",
-        "Europa is an e-commerce platform that offers a wide range of products, including cosmetics, skincare, and beauty products. The platform is designed to provide a seamless shopping experience for customers, with features such as a user-friendly interface, secure payment processing, and easy product search. The platform is built using Shopify, a popular e-commerce platform, and is optimized for mobile devices, ensuring that customers can shop on the go."
+        "歐台絲路創立於2014年，初期專注於引進歐洲高品質商品到台灣，如醫療健康產品、廚房用品等，並致力於將台灣優秀產品推向全球，搭建現代化的「絲路」。隨著業務發展，品牌在新冠疫情的挑戰下成功轉型，拓展至多角化經營，涵蓋保養品、食品、珠寶及家庭用品等領域。歐台絲路以「優質、創新、永續」為經營理念，並堅守「以善為本」的核心價值，積極回饋社會，連結台灣與世界，致力於創造更美好的未來。",
       ]}
       skills={[
         {
@@ -23,25 +22,22 @@ export default function EuropaProject() {
         },
       ]}
       industries={[
-        "Education",
-        "MUN Society Taiwan",
-        "Harvard University",
-        "English Communication",
         "Web Development",
-        "UIUX Design",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
+        "台灣綠界付款功能(信用卡分期、ATM虛擬帳號、TWQR)",
+        "綁定金流平台與物流配送（超商取貨、宅急便）",
+        "首頁彈跳視窗的加入會員通知",
+        "版面調整、主選單父子層分類管理",
+        "第三方社群帳號加入會員",
+        "產品評論與管理功能",
+        "折扣碼設定"
       ]}
       images={[
-        "/mst_welcome.jpg",
-        "/mst_ceremony.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg"
+        "/europa_payments.jpg",
+        "/europa_discount.jpg",
+        "/europa_login.jpg",
+        "/europa_feedback.jpg",
       ]}
     />
   );

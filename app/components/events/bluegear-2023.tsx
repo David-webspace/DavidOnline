@@ -1,12 +1,12 @@
 import React from "react";
-import ProjectDetail from "../ProjectDetail";
+import EventDetail from "../EventDetail";
 
 export default function BlueGear2023Project() {
   return (
-    <ProjectDetail
-      title="BlueGear 2023"
+    <EventDetail
+      title="交大管理顧問社 2023"
       banner="/bluegear.png"
-      category="Website"
+      category="Event"
       url=""
       about={[
         ""

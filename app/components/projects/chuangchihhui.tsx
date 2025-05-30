@@ -4,13 +4,12 @@ import ProjectDetail from "../ProjectDetail";
 export default function ChuangChihHuiProject() {
   return (
     <ProjectDetail
-      title="Chuang Chih Hui"
+      title="莊志輝藝術作品官網"
       banner="/ChuangChihHui_Banner.jpg"
       category="Website"
       url="https://chuangchihhui.com/"
       about={[
-        "It was an incredible honor to participate in the MUN Society Taiwan project as the CTO. I single-handedly designed and developed the official website from scratch, ensuring it met modern usability and design standards. Additionally, I co-organized an international conference in collaboration with Harvard University, which was a milestone achievement for the organization.",
-        "The MUN Society Taiwan (MST) is a cross-campus organization established in 2021 to promote Model United Nations (MUN) activities in Taiwan. It connects MUN enthusiasts, organizes conferences like the Taiwan International Model United Nations (TIMUN), and provides resources to enhance students' international awareness and leadership skills. MST has represented Taiwan at global events, such as WorldMUN Paris in 2023, and hosted large-scale conferences in collaboration with educational and research organizations."
+        "莊志輝為澎湖出生的台灣藝術家，擁有與眾不同的審美及創作手法，在國內外舉辦畫廊、博覽會等藝術宣傳，很開心可以為莊志輝的藝術作品製作一個專屬的官網。"
       ]}
       skills={[
         {
@@ -27,18 +26,16 @@ export default function ChuangChihHuiProject() {
         },
       ]}
       industries={[
-        "Education",
         "Chuang Chih Hui",
-        "Harvard University",
-        "English Communication",
         "Web Development",
+        "Art",
         "UIUX Design",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
+        "形象網站建立、作品陳列、客製化展示各頁排版，並完成RWD設計",
+        "選單層級分類管理",
+        "藝評與報導相關文章展示",
+        "支援雙語切換（中英文，使用i18next作為語系切換套件）"
       ]}
       images={[
         "/chuangchihhui_national.png",

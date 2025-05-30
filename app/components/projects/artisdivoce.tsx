@@ -4,13 +4,13 @@ import ProjectDetail from "../ProjectDetail";
 export default function ArtisdivoceProject() {
   return (
     <ProjectDetail
-      title="Artisdivoce"
+      title="娜拉坡 Artisdivoce"
       banner="/artisdivoce_banner.webp"
       category="Website"
       url="https://www.artisdivocehk.myshopify.com/"
       about={[
-        "Artisdivoce is an e-commerce platform that offers a wide range of products, including cosmetics, skincare, and beauty products. The platform is designed to provide a seamless shopping experience for customers, with features such as a user-friendly interface, secure payment processing, and easy product search. The platform is built using Shopify, a popular e-commerce platform, and is optimized for mobile devices, ensuring that customers can shop on the go.",
-        "Artisdivoce is an e-commerce platform that offers a wide range of products, including cosmetics, skincare, and beauty products. The platform is designed to provide a seamless shopping experience for customers, with features such as a user-friendly interface, secure payment processing, and easy product search. The platform is built using Shopify, a popular e-commerce platform, and is optimized for mobile devices, ensuring that customers can shop on the go."
+        "Artisdivoce是香港本地的電商平台，專門銷售化妝品、護膚品和美容產品。平台設計旨在為客戶提供流暢的購物體驗，並提供易於使用的界面、安全的支付處理和簡單的產品搜索功能。平台使用Shopify，一個流行的電商平台，並針對移動設備進行優化，確保客戶可以在路上購物。",
+        "Artisdivoce是香港本地的電商平台，專門銷售化妝品、護膚品和美容產品。平台設計旨在為客戶提供流暢的購物體驗，並提供易於使用的界面、安全的支付處理和簡單的產品搜索功能。平台使用Shopify，一個流行的電商平台，並針對移動設備進行優化，確保客戶可以在路上購物。"
       ]}
       skills={[
         {

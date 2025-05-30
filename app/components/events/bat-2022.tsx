@@ -9,7 +9,7 @@ export default function Bat2022Project() {
       category="Website"
       url=""
       about={[
-        "I was honored to serve as the Graduation Representative for the National Yang Ming University (NYCU) in 2024. As the representative, I was responsible for representing the interests of the students and ensuring their rights were protected. I worked closely with the university administration and faculty to address any concerns or issues that arose during the graduation process."
+        "經過面試後，我有幸成為交大國際志工（BAT）2022屆的成員，由交通大學建築所許倍銜教授帶領，一同前往台東的興隆國小進行當地建築。結合台灣文化與自然素材，木頭與竹子自然成為我們手中的材料，並經過一學期的設計提案與修正，終於將設計轉圖面為實際建築。"
       ]}
       skills={[
         {
@@ -19,24 +19,24 @@ export default function Bat2022Project() {
       ]}
       industries={[
         "Education",
-        "MUN Society Taiwan",
-        "Harvard University",
-        "English Communication",
-        "Web Development",
-        "UIUX Design",
+        "Architecture",
+        "Taitune",
+        "Wood",
+        "Bamboo",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
+        "建築設計提案",
+        "木工技術（裁切、榫卯、上漆、打磨與上角料等）",
+        "3D建模能力、數位製造",
+        "建築設計轉圖面為實際建築"
       ]}
       images={[
-        "/mst_welcome.jpg",
-        "/mst_ceremony.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg",
-        "/mst_conference.jpg"
+        "/bat2022_02.jpeg",
+        "/bat2022_03.jpeg",
+        "/bat2022_04.jpeg",
+        "/bat2022_06.jpeg",
+        "/bat2022_07.jpeg",
+        "/bat2022_05.jpeg"
       ]}
     />
   );

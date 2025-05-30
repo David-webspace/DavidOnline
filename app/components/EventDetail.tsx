@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 
 interface ProjectDetailProps { title: string; banner: string; category: string; url: string; about: string[]; skills: { name: string; icon: string }[]; industries: string[]; benefits: string[]; images: string[]; }
 
@@ -40,13 +41,13 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
 
       <div className="max-w-6xl mx-auto py-10 px-4">
         {/* Image Banner */}
-        <div className="mb-6">
+        <div className="mb-6 w-full h-[600px] bg-red-100 flex justify-center items-center overflow-hidden rounded-xl">
           <Image
             src={banner}
             alt={title}
-            width={600}
-            height={300}
-            className="rounded-xl w-full object-cover mb-4"
+            width={800}
+            height={400}
+            className="w-full object-cover mb-4"
           />
         </div>
         
@@ -71,7 +72,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
 
           {/* Benefits */}
           <section className="mb-8">
-          <h3 className="font-semibold mb-2 text-xl text-black">Services Benefits:</h3>
+          <h3 className="font-semibold mb-2 text-xl text-black">學習項目:</h3>
           <ul className="list-disc pl-5 text-md text-gray-700">
             {benefits.map((benefit, i) => (
               <li key={i}>{benefit}</li>
@@ -81,7 +82,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
 
         {/* Skills */}
         <section className="mb-8">
-          <h3 className="font-semibold mb-2 text-xl text-black">Skills Include:</h3>
+          <h3 className="font-semibold mb-2 text-xl text-black">技術能力:</h3>
           <ul className="grid grid-cols-2 md:grid-cols-6 gap-2 text-sm">
             {skills.map((skill, i) => (
               <li key={i} className="flex items-center gap-2 text-gray-700 text-lg">
@@ -95,7 +96,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
         {/* Image */}
         {images && images.length > 0 && (
           <>
-            <h3 className="font-semibold mb-2 text-xl text-black">Project Photos: </h3>
+            <h3 className="font-semibold mb-2 text-xl text-black">專案照片: </h3>
             <section className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               {(showAllImages ? images : images.slice(0, 3)).map((img, i) => (
                 <Image
@@ -121,18 +122,10 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
           </>
         )}
 
-        {/* Industries */}
-        <section className="mb-8">
-          <h3 className="font-semibold mb-2">Top Industries I Cover in App Design</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
-            {industries.map((industry, i) => (
-              <div key={i} className="bg-gray-50 p-2 rounded-lg border flex items-center gap-2">
-                <span className="text-black">🏷️</span> {industry}
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
 
   );

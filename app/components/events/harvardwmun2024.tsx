@@ -4,12 +4,13 @@ import EventDetail from "../EventDetail";
 export default function HarvardWMUN2024Project() {
   return (
     <EventDetail
-      title="Harvard WMUN 2024"
+      title="哈佛世界模擬聯合國大會 2024"
       banner="/harvardwmun_2024_banner.jpg"
       category="Event"
       url=""
       about={[
-        "I was honored to serve as the Graduation Representative for the National Yang Ming University (NYCU) in 2024. As the representative, I was responsible for representing the interests of the students and ensuring their rights were protected. I worked closely with the university administration and faculty to address any concerns or issues that arose during the graduation process."
+        "感謝總召的邀請，讓我有機會見識這麼大型的國際交流場合。一直認為英語溝通是一項重要的技能，也因此次機會可以進到台北國際會議中心。",
+        "在這次的活動當中，我擔任公關部元進行與廠商之間的贊助商品協調，同時擔任部門CTO進行活動網站的開發。"
       ]}
       skills={[
         {
@@ -34,9 +35,13 @@ export default function HarvardWMUN2024Project() {
       images={[
         "/harvardwmun_2024_banner.jpg",
         "/harvardwmun_2024_personal.jpg",
-        "/mst_welcome.jpg",
-        "/mst_ceremony.jpg",
-        "/mst_conference.jpg"
+        "/harvardwmun2024_celavi.jpg",
+        "/harvardwmun2024_west.jpg",
+        "/harvardwmun2024_delegate_01.jpg",
+        "/harvardwmun2024_stage.jpeg",
+        "/harvardwmun2024_delegate_02.jpg",
+        "/harvardwmun2024_me_02.jpg",
+        "/harvardwmun2024_me_03.jpg",
       ]}
     />
   );
