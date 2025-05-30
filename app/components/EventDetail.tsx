@@ -35,7 +35,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
             <span className="mx-2">&gt;</span>
             <span className="font-semibold">{title}</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">{title}</h1>
+          <h1 className="md:text-5xl text-2xl font-bold tracking-wide mb-2">{title}</h1>
         </div>
       </section>
 
@@ -54,7 +54,7 @@ const EventDetail: React.FC<ProjectDetailProps> = ({ title, banner, category, ur
         {/* Descriptions */}
         <section className="mb-8">
           <div className="mb-4 flex justify-between items-end gap-2">
-            <h2 className="text-5xl font-bold text-black">{title}</h2>
+            <h2 className="md:text-5xl text-2xl font-bold text-black">{title}</h2>
             {category !== "Website" ? null : (
               <Link
                 href={url}

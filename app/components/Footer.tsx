@@ -5,22 +5,22 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 pt-12 pb-30 px-4 mt-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-300">
           Let’s <span className="text-blue-500 italic">Connect</span> there
         </h2>
         <div className="flex flex-col md:flex-row md:justify-between gap-8">
           {/* Left - Brand & Social */}
           <div className="flex-1 min-w-[220px]">
             <div className="flex items-center mb-3">
-              <span className="bg-blue-400 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-2">O</span>
-              <span className="text-xl font-semibold">Justin Pan</span>
+              {/* <span className="bg-blue-400 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-2">O</span> */}
+              <span className="text-4xl text-blue-600 font-semibold">Justin Pan</span>
             </div>
             <p className="text-gray-500 text-sm mb-4">Please feel free to contact me for any inquiries or questions.</p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/" target="_blank" className="bg-blue-400 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaFacebookF /></a>
-              <a href="https://www.behance.net/altondesignplace" target="_blank" className="bg-blue-400 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaBehance /></a>
-              <a href="https://www.instagram.com/chenshshei/" target="_blank" className="bg-blue-400 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/in/cheng-xupan/" target="_blank" className="bg-blue-400 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaLinkedinIn /></a>
+              <a href="https://www.facebook.com/" target="_blank" className="bg-blue-500 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaFacebookF /></a>
+              <a href="https://www.behance.net/altondesignplace" target="_blank" className="bg-blue-500 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaBehance /></a>
+              <a href="https://www.instagram.com/chenshshei/" target="_blank" className="bg-blue-500 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/cheng-xupan/" target="_blank" className="bg-blue-500 rounded-full w-9 h-9 flex items-center justify-center text-white"><FaLinkedinIn /></a>
             </div>
           </div>
 
@@ -28,11 +28,11 @@ export default function Footer() {
           <div className="flex-1 flex flex-col md:flex-row gap-8 min-w-[300px]">
             <div>
               <div className="font-semibold text-blue-600 mb-2">Navigation</div>
-              <nav className="flex flex-col gap-1 text-gray-700 text-sm">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/projects">Projects</Link>
-                <Link href="/contact">Contact</Link>
+              <nav className="flex md:flex-col flex-row gap-1 text-gray-700 text-sm">
+                <Link href="/" className="mr-4">Home</Link>
+                <Link href="/about" className="mr-4">About</Link>
+                <Link href="/projects" className="mr-4">Projects</Link>
+                <Link href="/contact" className="mr-4">Contact</Link>
               </nav>
             </div>
             <div>
