@@ -16,6 +16,28 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Justin Pan Portfolio",
+  keywords: [],
+  authors: [
+    {
+      name: "Justin Pan",
+      // url: "https://justinpan.com",
+    },
+  ],
+  icons: [
+    {
+      rel: "icon",
+      type: "image/jpeg",
+      sizes: "32x32",
+      url: "/profile.jpeg",
+    },
+    // {
+    //   rel: "icon",
+    //   type: "image/jpeg",
+    //   sizes: "16x16",
+    //   url: "/profile.jpeg",
+    // },
+  ],
+
   description: "2025年不能錯過的最強頂尖前端開發者，專注於前端網站架設，也能夠進行UIUX研究流程，並熟悉Figma操作。",
 };
 
@@ -25,7 +47,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="zh">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

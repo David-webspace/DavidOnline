@@ -13,6 +13,7 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   harvardwmun2024: () => import("../../components/events/harvardwmun2024"),
   artisdivoce: () => import("../../components/projects/artisdivoce"),
   rosehip: () => import("../../components/projects/rosehip"),
+  sanpany: () => import("../../components/projects/sanpany"),
 };
 
 interface PageProps {
