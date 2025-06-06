@@ -1,3 +1,4 @@
+"use client";
 import { NextIntlClientProvider } from 'next-intl';
 import LanguageSelector from "../../components/LanguageSelector";
 import { Geist, Geist_Mono } from "next/font/google";
