@@ -15,12 +15,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import messages from '../../../messages/en/common.json';
+
 export default function LocaleLayout({
   children
 }: {
   children: ReactNode;
 }) {
-  const messages = require('../../../messages/en/common.json');
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
