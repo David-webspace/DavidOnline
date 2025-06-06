@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import Link from "../../components/Link";
+import Link from "next/link";
 
 export default function ContactPage() {
   const t = useTranslations();
