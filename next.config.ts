@@ -10,11 +10,7 @@ const nextConfig: NextConfig = {
     ],
     domains: ['images.unsplash.com', 'images.pexels.com', 'somecdn.com'], 
   },
-  i18n: {
-    locales: ['zh', 'en'],
-    defaultLocale: 'zh',
-    localeDetection: false,
-  },
+
 };
 
 export default nextConfig;
