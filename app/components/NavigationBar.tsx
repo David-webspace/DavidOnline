@@ -19,6 +19,7 @@ export default function NavigationBar() {
           <Link href="/" className={pathname === "/" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>首頁</Link>
           <Link href="/about" className={pathname === "/about" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>關於我</Link>
           <Link href="/projects" className={pathname === "/projects" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>專案經驗</Link>
+          <Link href="/service" className={pathname === "/service" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>提供服務</Link>
           <Link href="/contact" className={pathname === "/contact" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}>聯絡我</Link>
         </div>
      
