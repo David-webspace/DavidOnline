@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
 import ScrollToTop from "../components/ScrollToTop";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 function slugify(name: string) {
   return name.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
@@ -91,22 +92,32 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Render project cards dynamically */}
           {filteredProjects.map((project: Project) => (
-            <Link
+            <motion.div
               key={project.pathname}
-              href={`/projects/${slugify(project.pathname)}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.7 }}
+              whileHover={{ scale: 1.035 }}
               className="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition"
             >
-              <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
-              <div className="flex gap-2 mb-2">
-                {project.tags.map((tag: string) => (
-                  <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
-                ))}
-              </div>
-              <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
-              {project.time && (
-                <div className="text-md text-gray-500 mb-1">{project.time}</div>
-              )}
-            </Link>
+              <Link
+                href={`/projects/${slugify(project.pathname)}`}
+                className="flex-1 flex flex-col"
+                style={{ textDecoration: 'none' }}
+              >
+                <Image src={"/" + project.image} alt={project.name} width={400} height={260} className="rounded-xl w-full h-56 object-cover mb-4" priority={true} />
+                <div className="flex gap-2 mb-2">
+                  {project.tags.map((tag: string) => (
+                    <span key={tag} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">{tag}</span>
+                  ))}
+                </div>
+                <div className="font-semibold text-lg mb-1 text-blue-600">{project.name}</div>
+                {project.time && (
+                  <div className="text-md text-gray-500 mb-1">{project.time}</div>
+                )}
+              </Link>
+            </motion.div>
           ))}
         </div>
       </main>

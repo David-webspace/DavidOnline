@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type Clamp8LinesProps = {
   children: React.ReactNode;
@@ -382,22 +383,64 @@ export default function Home() {
       <NavigationBar/>
 
       {/* Hero Section */}
-      <HeroSection/>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7 }}
+      >
+        <HeroSection/>
+      </motion.section>
 
       {/* Academic & Professional Journey Section */}
-      <JourneySection />
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.08 }}
+      >
+        <JourneySection />
+      </motion.section>
 
       {/* Projects Preview Section */}
-      <ProjectsPreview />
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.16 }}
+      >
+        <ProjectsPreview />
+      </motion.section>
 
       {/* Highlight Section */}
-      <HeightLightSection/>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.24 }}
+      >
+        <HeightLightSection/>
+      </motion.section>
 
       {/* Services Section */}
-      <ServiceSection/>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.32 }}
+      >
+        <ServiceSection/>
+      </motion.section>
 
       {/* Tools Section */}
-      <SkillSection/>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
+      >
+        <SkillSection/>
+      </motion.section>
       
       <Footer />
       <ScrollToTop />

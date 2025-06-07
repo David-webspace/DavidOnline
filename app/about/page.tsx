@@ -7,6 +7,7 @@ import NavigationBar from "../components/NavigationBar";
 import ScrollToTop from "../components/ScrollToTop";
 
 import React, { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type Clamp8LinesProps = {
   children: React.ReactNode;
@@ -253,13 +254,34 @@ export default function AboutPage() {
       </section>
 
       {/* IntroSection */}
-      <IntroSection />
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7 }}
+      >
+        <IntroSection />
+      </motion.section>
 
       {/* Academic & Professional Journey Section */}
-      <EducationSection />
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
+        <EducationSection />
+      </motion.section>
 
       {/* Latest Updates Section */}
-      <HeightLightSection />
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        <HeightLightSection />
+      </motion.section>
 
       <Footer />
       <ScrollToTop />

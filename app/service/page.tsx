@@ -4,10 +4,13 @@ import NavigationBar from "../components/NavigationBar";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import AnimatedPage from "../components/AnimatedPage";
+import { motion } from "framer-motion";
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <AnimatedPage>
+      <div className="min-h-screen bg-gray-50">
       {/* Navigation Bar */}
       <NavigationBar />
 
@@ -25,7 +28,13 @@ export default function ServicePage() {
       <section className="max-w-6xl mx-auto py-12 px-4">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Web Development */}
-          <div className="bg-white rounded-lg shadow p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.05 }}
+            className="bg-white rounded-lg shadow p-8"
+          >
             <h2 className="text-2xl font-bold mb-4 text-gray-600">網站開發 / Web Development</h2>
             <p className="mb-2 text-gray-700">
               我擅長前端網頁開發，能根據客戶需求打造響應式（RWD）、與易維護的網站。無論是個人作品集、企業形象官網、活動宣傳網頁等等，都能提供專業的解決方案。
@@ -36,9 +45,15 @@ export default function ServicePage() {
               <li>Tailwind CSS / UI 設計</li>
               <li>SEO & 性能優化</li>
             </ul>
-          </div>
+          </motion.div>
           {/* Shopify E-commerce */}
-          <div className="bg-white rounded-lg shadow p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.20 }}
+            className="bg-white rounded-lg shadow p-8"
+          >
             <h2 className="text-2xl font-bold mb-4 text-gray-600">Shopify 電商網站建置</h2>
             <p className="mb-2 text-gray-700">
               提供電商網站規劃、設計與上線一條龍服務，協助品牌快速進入線上銷售市場。可協助客製化主題、功能擴充與第三方整合。
@@ -49,7 +64,7 @@ export default function ServicePage() {
               <li>行銷工具整合（如 EDM、Google/Facebook）</li>
               <li>後台教學與維護諮詢</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
         <div className="mt-10 text-center">
           <p className="text-lg font-semibold">歡迎聯絡我，討論您的專屬需求！</p>
@@ -59,6 +74,7 @@ export default function ServicePage() {
 
       <Footer />
       <ScrollToTop />
-    </div>
+      </div>
+    </AnimatedPage>
   )
 }
