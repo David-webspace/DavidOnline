@@ -1,4 +1,3 @@
-
 "use client";
 import { FaFigma, FaReact, FaNodeJs, FaShopify, FaInstagramSquare, FaFacebookSquare, FaLinkedin, FaBehanceSquare, FaGithubSquare } from "react-icons/fa";
 import Footer from "./components/Footer";
@@ -384,60 +383,60 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18 }}
       >
         <HeroSection/>
       </motion.section>
 
       {/* Academic & Professional Journey Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.08 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.08 }}
       >
         <JourneySection />
       </motion.section>
 
       {/* Projects Preview Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.16 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.16 }}
       >
         <ProjectsPreview />
       </motion.section>
 
       {/* Highlight Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.24 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.24 }}
       >
         <HeightLightSection/>
       </motion.section>
 
       {/* Services Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.32 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.32 }}
       >
         <ServiceSection/>
       </motion.section>
 
       {/* Tools Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.4 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.4 }}
       >
         <SkillSection/>
       </motion.section>

@@ -9,30 +9,19 @@ export default function MSTProject() {
       category="Website"
       url="https://munsoc.tw/"
       about={[
-        "It was an incredible honor to participate in the MUN Society Taiwan project as the CTO. I single-handedly designed and developed the official website from scratch, ensuring it met modern usability and design standards. Additionally, I co-organized an international conference in collaboration with Harvard University, which was a milestone achievement for the organization.",
-        "The MUN Society Taiwan (MST) is a cross-campus organization established in 2021 to promote Model United Nations (MUN) activities in Taiwan. It connects MUN enthusiasts, organizes conferences like the Taiwan International Model United Nations (TIMUN), and provides resources to enhance students' international awareness and leadership skills. MST has represented Taiwan at global events, such as WorldMUN Paris in 2023, and hosted large-scale conferences in collaboration with educational and research organizations."
+        "台灣模擬聯合國學會是由一群熱愛英文、模擬聯合國的台灣大學生所組成，目前已經成立學會，正在努力的推廣台灣模擬聯合國活動。台灣大多數模聯是由高中生在參與，因為大學的模聯資源較少，社團也不太推廣，因此我們的忠旨是希望將模聯推廣為更加容易參與的活動。",
+        "非常感謝總招的邀請，擔任這次活動的工作人員，我主要負責學位官網架設與維護，同時負責與廠商接洽贊助品事宜。",
+        "多虧了這次活動，才有機會到台北國際會議中心一探究竟，活動五天必須穿著整齊西裝。"
       ]}
       skills={[
         {
-          name: "ReactJs",
+          name: "English Speaking",
           icon: "SiReact",
         },
         {
           name: "NextJs",
           icon: "SiNextdotjs",
-        },
-        {
-          name: "TypeScript",
-          icon: "SiTypescript",
-        },
-        {
-          name: "TailwindCSS",
-          icon: "SiTailwindcss",
-        },
-        {
-          name: "Figma",
-          icon: "SiFigma",
-        },
+        }
       ]}
       industries={[
         "Education",
@@ -43,8 +32,8 @@ export default function MSTProject() {
         "UIUX Design",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
+        "提供模擬聯合國學會官網，整個網站由我一人開發，使用ReactJs端框架，並使用Github來綁定網域。",
+        "官網UIUX介面設計",
         "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
         "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
       ]}
