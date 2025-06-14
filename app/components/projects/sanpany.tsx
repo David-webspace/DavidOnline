@@ -23,12 +23,14 @@ export default function SanpanyProject() {
         "Shopify",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
+        "舊網站資料移轉",
+        "上排選單排版設定、商品系列分類、商品標籤分類",
+        "部落格文章設定",
+        "客製化商品價格展示"
       ]}
       images={[
+        // "/sanpany_logo.jpg",
+        "/sanpany_logo.png",
         "/sanpany_banner.jpg",
       ]}
     />

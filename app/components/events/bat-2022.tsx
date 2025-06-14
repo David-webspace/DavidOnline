@@ -4,7 +4,7 @@ import ProjectDetail from "../ProjectDetail";
 export default function Bat2022Project() {
   return (
     <ProjectDetail
-      title="Bat 2022"
+      title="交大國際志工（BAT）2022"
       banner="/bat2022.jpeg"
       category="Website"
       url=""
@@ -13,8 +13,8 @@ export default function Bat2022Project() {
       ]}
       skills={[
         {
-          name: "ReactJs",
-          icon: "SiReact",
+          name: "Rhino",
+          icon: "SiRhinoceros",
         }
       ]}
       industries={[

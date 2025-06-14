@@ -34,8 +34,6 @@ export default function MSTProject() {
       benefits={[
         "提供模擬聯合國學會官網，整個網站由我一人開發，使用ReactJs端框架，並使用Github來綁定網域。",
         "官網UIUX介面設計",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
       ]}
       images={[
         "/mst_welcome.jpg",

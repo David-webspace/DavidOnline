@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { SiReact, SiFigma, SiTypescript, SiNextdotjs, SiTailwindcss, SiRhinoceros, SiGooglesearchconsole, SiShopify } from "react-icons/si";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 
@@ -15,6 +15,9 @@ const iconMap: { [key: string]: React.ComponentType<{ size?: number; className?:
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
+  SiRhinoceros,
+  SiGooglesearchconsole,
+  SiShopify,
   // Add more icons here as needed
 };
 

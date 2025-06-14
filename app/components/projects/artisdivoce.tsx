@@ -27,10 +27,8 @@ export default function ArtisdivoceProject() {
         "UIUX Design",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
+        "跨境金流串接（使用Shopify Payment）",
+        "網站資料轉移、網域移轉",
       ]}
       images={[
         "/artisdivoce_banner.webp",
