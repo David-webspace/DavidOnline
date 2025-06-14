@@ -50,11 +50,12 @@ export default function NavigationBar() {
           `}
         >
           <div className="flex flex-col items-center gap-4 w-full mt-12">
-            <Link href="/" className={`py-2 px-4 w-full text-center ${pathname === "/" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>首頁</Link>
-            <Link href="/about" className={`py-2 px-4 w-full text-center ${pathname === "/about" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>關於我</Link>
-            <Link href="/projects" className={`py-2 px-4 w-full text-center ${pathname === "/projects" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>專案經驗</Link>
-            <Link href="/contact" className={`py-2 px-4 w-full text-center ${pathname === "/contact" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>聯絡我</Link>
-          </div>
+  <Link href="/" className={`py-2 px-4 w-full text-center ${pathname === "/" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>首頁</Link>
+  <Link href="/about" className={`py-2 px-4 w-full text-center ${pathname === "/about" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>關於我</Link>
+  <Link href="/projects" className={`py-2 px-4 w-full text-center ${pathname === "/projects" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>專案經驗</Link>
+  <Link href="/service" className={`py-2 px-4 w-full text-center ${pathname === "/service" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>提供服務</Link>
+  <Link href="/contact" className={`py-2 px-4 w-full text-center ${pathname === "/contact" ? "text-blue-600 font-bold" : "text-black hover:text-blue-600"}`} onClick={() => setOpen(false)}>聯絡我</Link>
+</div>
         </div>
       </nav>
     )
