@@ -13,8 +13,8 @@ export default function BlueGear2023Project() {
       ]}
       skills={[
         {
-          name: "ReactJs",
-          icon: "SiReact",
+          name: "Teamwork",
+          icon: "RiTeamFill",
         }
       ]}
       industries={[
@@ -26,10 +26,7 @@ export default function BlueGear2023Project() {
         "UIUX Design",
       ]}
       benefits={[
-        "Designed and developed the official website independently, ensuring seamless user experience and responsive design.",
-        "Collaborated with international organizations like Harvard University to organize large-scale events.",
-        "Enhanced the visibility and impact of the MUN Society Taiwan through innovative web solutions.",
-        "Utilized modern web development tools and frameworks to create a high-quality platform for MUN enthusiasts."
+        "團隊合作，拆解問題，嘗試提案，表述提案"
       ]}
       images={[]}
     />
