@@ -56,7 +56,7 @@ const IntroSection = () => {
      {/* Who is Section */}
      <section className="max-w-6xl mx-auto bg-white rounded-2xl shadow p-8 mt-[-48px] relative z-10 flex flex-col md:flex-row items-center gap-8">
         {/* Left: Profile Image */}
-        <div className="flex-shrink-0 w-40 h-40 relative overflow-hidden rounded-2xl border-4 border-blue-100">
+        <div className="flex-shrink-0 w-40 h-40 relative overflow-hidden rounded-2xl border-1">
           <Image src="/profile.jpeg" alt="Justin Pan photo" fill className="object-cover" />
         </div>
         {/* Right: Info */}
@@ -70,11 +70,11 @@ const IntroSection = () => {
               <div className="text-gray-500 text-xs">Projects Completed</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-blue-600">50+</div>
+              <div className="text-2xl font-bold text-blue-600">10+</div>
               <div className="text-gray-500 text-xs">Industry Covered</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-blue-600">0+</div>
+              <div className="text-2xl font-bold text-blue-600">1+</div>
               <div className="text-gray-500 text-xs">Years of Experience</div>
             </div>
           </div>
@@ -255,30 +255,30 @@ export default function AboutPage() {
 
       {/* IntroSection */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18 }}
       >
         <IntroSection />
       </motion.section>
 
       {/* Academic & Professional Journey Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.1 }}
       >
         <EducationSection />
       </motion.section>
 
       {/* Latest Updates Section */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.18, delay: 0.2 }}
       >
         <HeightLightSection />
       </motion.section>
