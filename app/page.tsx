@@ -1,5 +1,6 @@
 "use client";
 import { FaFigma, FaReact, FaNodeJs, FaShopify, FaInstagramSquare, FaFacebookSquare, FaLinkedin, FaBehanceSquare, FaGithubSquare } from "react-icons/fa";
+import { FiDatabase } from "react-icons/fi";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
 import ScrollToTop from "./components/ScrollToTop";
@@ -60,10 +61,10 @@ const HeroSection =() => {
           <span className="text-black">Web Designer & Developer</span>
         </h1>
         <p className="text-gray-500 mb-4 text-base md:text-lg">
-          我叫潘丞詡。畢業於國立陽明交通大學百川學士學位學程，接觸過電機工程、跨領域設計相關課程。目前負責前端網站架設，也能夠進行UIUX研究流程，並熟悉Figma操作。
+          我叫潘丞詡。畢業於國立陽明交通大學百川學士學位學程，接觸過電機工程、跨領域設計相關課程。熟悉前端網站架設與UIUX流程，目前於國泰金控進行系統全端工程師培訓。
         </p>
         <p className="text-gray-500 mb-4 text-base md:text-lg">
-          我使用NextJS, ReactJS, NodeJS等框架建立網站，也有完成RWD的能力，並熟悉使用Shopify來建立電商網站。
+          我會使用NextJS, ReactJS, VueJS 與 NodeJS等框架建立網站，也有完成RWD的能力，並熟悉使用Shopify來建立電商網站。
         </p>
         <p className="text-gray-500 mb-6 text-base md:text-lg">
           我很積極，好相處善溝通，懂得如何進行團體合作，並盡力達成團隊的需求。我喜歡學習新的知識，不斷地提升自我能力將會創造更大的價值。若您有外包設計需求，歡迎與我聯絡。
@@ -96,6 +97,33 @@ const HeroSection =() => {
 }
 
 const JourneySection = () => {
+  // 定義型別
+  interface Experience {
+    title: string;
+    company: string;
+    period: string;
+  }
+  const [experiences, setExperiences] = useState<Experience[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('/data/experiences.json')
+      .then((res) => {
+        if (!res.ok) throw new Error('資料載入失敗');
+        return res.json();
+      })
+      .then((data) => {
+        setExperiences(data);
+        setError(null);
+      })
+      .catch((err) => {
+        setError(err.message || '資料載入失敗');
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
   return(
     <section className="w-full bg-white py-16 px-4 md:px-0 text-black">
       <div className="max-w-6xl mx-auto">
@@ -132,28 +160,23 @@ const JourneySection = () => {
               </span>
               <span className="font-semibold text-lg text-blue-600">工作經驗</span>
             </div>
+            {/* 用 fetch 動態抓取 experiences.json 並渲染 */}
             <ul className="space-y-4">
-              <li>
-                <div className="font-bold text-xl">電商網站工程師</div>
-                <div className="font-bold text-sm mb-1">潮網科技股份有限公司（Wavenet）</div>
-                <div className="text-xs text-gray-400 mb-1">APR 2025 - Present</div>
-              </li>
-              <li>
-                <div className="font-bold text-xl">UX實習生</div>
-                <div className="font-bold text-sm mb-1">威聯通科技股份有限公司 （QNAP Systems, Inc.）</div>
-                <div className="text-xs text-gray-400 mb-1">JUN 2024 - NOV 2024</div>
-              </li>
-              <li>
-                <div className="font-bold text-xl">UIUX實習生</div>
-                <div className="font-bold text-sm mb-1">奇策智能雲端有限公司 （CRYPTO-ARSENAL TECHNOLOGY CO.）</div>
-                <div className="text-xs text-gray-400 mb-1">Feb 2024 - JUN 2024</div>
-              </li>
+              {loading && <li>載入中...</li>}
+              {error && <li className="text-red-500">{error}</li>}
+              {!loading && !error && experiences.map((exp, idx) => (
+                <li key={idx}>
+                  <div className="font-bold text-xl">{exp.title}</div>
+                  <div className="font-bold text-sm mb-1">{exp.company}</div>
+                  <div className="text-xs text-gray-400 mb-1">{exp.period}</div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 // ProjectsPreview: shows up to 4 projects as cards, with a 'View All Projects' button
@@ -258,7 +281,7 @@ const HeightLightSection = () => (
             <Image src="/nccu_golden.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
             <div className="text-xs text-gray-400 mb-1">2023/05</div>
             <div className="text-black font-bold text-xl mb-2">政大金旋獎 2023</div>
-            <Clamp8Lines className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</Clamp8Lines>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">終於見識到了什麼叫做政大金旋獎，果然還是需要將自己推進更猛烈的環境才能夠認清自己的位置與狀況。但是對於去年沒有入選的舞來說，今年是很大的進步了。看到跟怪物一樣的大家，也算是無憾了。謝謝我的好朋友特地來看我比賽，辛苦各位工作人員！</Clamp8Lines>
             <div className="flex justify-end">
               <span className="text-gray-400 text-2xl">→</span>
             </div>
@@ -270,7 +293,7 @@ const HeightLightSection = () => (
             <Image src="/harvardwmun_2024_banner.jpg" alt="Update 3" width={400} height={200} className="rounded mb-4 object-cover w-full h-40" />
             <div className="text-xs text-gray-400 mb-1">2024/03</div>
             <div className="text-black font-bold text-xl mb-2">哈佛世界模擬聯合國大會2024</div>
-            <Clamp8Lines className="text-gray-900 text-sm mb-4">Lana Del Rey is headlining the 2025 Coachella Festival, bringing her signature style and new music to the stage. Fans are eagerly anticipating her performance at one of the world&#39;s biggest music festivals...</Clamp8Lines>
+            <Clamp8Lines className="text-gray-900 text-sm mb-4">很感謝哈佛世界模擬聯合國大會2024，感謝總召的邀請，讓我有機會不斷地看到我想像以外的世界，結識更多厲害的人，嘗試不同的角色，並為團隊盡一份心力。</Clamp8Lines>
             <div className="flex justify-end">
               <span className="text-gray-400 text-2xl">→</span>
             </div>
@@ -345,25 +368,31 @@ const SkillSection = () => {
           </h2>
         </div>
         <div className="flex flex-col md:flex-row justify-between">
-          {/* Tool 1: Figma */}
-          <div className="flex md:flex-col items-center bg-gray-50 rounded-full md:py-8 py-4 px-4 mb-4 w-full md:w-1/6 shadow-sm">
-            <FaFigma className="md:mb-4 mb-0" size={48} color="#000"/>
-            <span className="text-2xl font-bold mb-1">90%</span>
-            <span className="text-gray-500 font-bold">Figma</span>
-          </div>
-          {/* Tool 2: ReactJs */}
+          {/* Tool 1: ReactJs */}
           <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
             <FaReact className="md:mb-4 mb-0" size={48} color="#000"/>
             <span className="text-2xl font-bold mb-1">80%</span>
             <span className="text-gray-500 font-bold">ReactJs</span>
           </div>
-          {/* Tool 3: NodeJs */}
+          {/* Tool 2: NodeJs */}
           <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
             <FaNodeJs className="md:mb-4 mb-0" size={48} color="#000"/>
             <span className="text-2xl font-bold mb-1">60%</span>
             <span className="text-gray-500 font-bold">NodeJs</span>
           </div>
-          {/* Tool 4: Shopify */}
+          {/* Tool 3: SQL */}
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <FiDatabase className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">90%</span>
+            <span className="text-gray-500 font-bold">SQL</span>
+          </div>
+          {/* Tool 4: Figma */}
+          <div className="flex md:flex-col items-center bg-gray-50 rounded-full md:py-8 py-4 px-4 mb-4 w-full md:w-1/6 shadow-sm">
+            <FaFigma className="md:mb-4 mb-0" size={48} color="#000"/>
+            <span className="text-2xl font-bold mb-1">90%</span>
+            <span className="text-gray-500 font-bold">Figma</span>
+          </div>
+          {/* Tool 5: Shopify */}
           <div className="flex md:flex-col items-center bg-gray-50 rounded-full py-8 px-4 mb-4 w-full md:w-1/6 shadow-sm">
             <FaShopify className="md:mb-4 mb-0" size={48} color="#000"/>
             <span className="text-2xl font-bold mb-1">90%</span>
