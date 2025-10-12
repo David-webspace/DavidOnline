@@ -62,7 +62,7 @@ const IntroSection = () => {
         {/* Right: Info */}
         <div className="flex-1">
           {/* <h2 className="text-2xl md:text-3xl font-bold mb-2 text-black">關於我</h2> */}
-          <p className="text-gray-600 mb-6">我叫潘丞詡。畢業於國立陽明交通大學百川學士學位學程，接觸過電機工程、跨領域設計相關課程。目前負責前端網站架設，也能夠進行UIUX研究流程，並熟悉Figma操作。</p>
+          <p className="text-gray-600 mb-6">我叫潘丞詡。畢業於國立陽明交通大學百川學士學位學程，接觸過電機工程、跨領域設計相關課程。目前負責前後端系統開發與串接</p>
 
           <div className="flex gap-8 mb-6">
             <div>
@@ -87,11 +87,21 @@ const IntroSection = () => {
 
       <section className="w-full bg-white py-16 px-4 md:px-0">
         <div className="max-w-6xl mx-auto">
-          <p className="text-gray-600 mb-6">我是潘丞詡，畢業於國立陽明交通大學百川學士學位學程，主修創新科技與跨領域設計。在學期間，我接觸了電機工程、跨領域設計，以及前端網站架設等多元領域，並修習了電子學、電路學、邏輯設計、訊號與系統、建築設計、3D建模與參數化設計等課程。我也有幸代表學程在2024年畢業典禮上擔任致詞代表。</p>
-          <p className="text-gray-600 mb-6">我熱愛學習與挑戰新事物，並在學習過程中累積了豐富的實習經驗。例如，在威聯通科技擔任UX使用者體驗實習生時，我導入了產品滿意度調查工作流程，重新定義Jira流程，並顯著提升了滿意度數據在產品開發中的應用效率。此外，我還完成了多項UI設計及重新設計提案，並提出數位轉型平台設計的建議。</p>
-          <p className="text-gray-600 mb-6">在奇策智能雲端的實習中，我設計了兩項網站介面，包括用戶後台發文管理系統與儀表板界面，並進行了競品分析，優化了產品設計的一致性。</p>
-          <p className="text-gray-600 mb-6">除了實習經驗，我也積極參與比賽與社團活動。我曾在大專校院創業實戰模擬學習平台競賽中，提出結合客製化醫療座椅與數位製造技術的創新解決方案，並獲得佳作。在台灣模擬聯合國學會，我擔任技術長，成功建立學會官網，並與哈佛大學合作舉辦國際會議。</p>
-          <p className="text-gray-600 mb-6">這些經歷讓我更加堅信，透過持續學習與實踐，我能為團隊與自己創造更多價值。我期待未來能在更多領域中發揮所長，持續成長。</p>
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            國立陽明交通大學百川學士學位學程畢業，主修創新科技與跨領域設計。具備扎實的電機工程基礎，專精於電子學、電路設計、邏輯設計及訊號處理系統，同時融合建築設計、3D建模與參數化設計等跨領域技能。曾榮獲2024年畢業典禮致詞代表殊榮，展現卓越的溝通表達能力。
+          </p>
+
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            現任國泰證券專案開發工程師，負責系統開發與專案執行。過往於威聯通科技實習期間，專注於UI/UX設計與工程團隊間的協作溝通，成功橋接設計與技術需求，提升產品開發效率。
+          </p>
+
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            積極參與創新競賽與專業社團，曾於大專校院創業實戰模擬學習平台競賽中，提出結合客製化醫療座椅與數位製造技術的創新解決方案，獲得評審肯定。在台灣模擬聯合國學會擔任技術長期間，主導學會官方網站建置，並成功與哈佛大學合作籌辦國際會議，展現卓越的專案管理與國際合作能力。
+          </p>
+
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            秉持持續學習與實踐的精神，致力於為團隊創造價值並推動創新解決方案。期待在專業領域中持續精進，貢獻所學並追求卓越成就。
+          </p>
         </div>
       </section>
     </>
@@ -136,9 +146,14 @@ const EducationSection = () => (
             </div>
             <ul className="space-y-4">
               <li>
+                <div className="font-bold text-xl">系統全端培訓工程師</div>
+                <div className="font-bold text-sm mb-1">國泰金融控股股份有限公司（Cathay Financial Holdings Co., Ltd.）</div>
+                <div className="text-xs text-gray-400 mb-1">JUL 2025 - Present</div>
+              </li>
+              <li>
                 <div className="font-bold text-xl">電商網站工程師</div>
                 <div className="font-bold text-sm mb-1">潮網科技股份有限公司（Wavenet）</div>
-                <div className="text-xs text-gray-400 mb-1">APR 2025 - Present</div>
+                <div className="text-xs text-gray-400 mb-1">APR 2025 - JUL 2025</div>
               </li>
               <li>
                 <div className="font-bold text-xl">UX實習生</div>
