@@ -40,9 +40,11 @@ export default function ServicePage() {
               我擅長前端網頁開發，能根據客戶需求打造響應式（RWD）、與易維護的網站。無論是個人作品集、企業形象官網、活動宣傳網頁等等，都能提供專業的解決方案。
             </p>
             <ul className="list-disc pl-5 text-gray-600">
-              <li>React / Next.js / TypeScript</li>
-              <li>Node.js</li>
-              <li>Tailwind CSS / UI 設計</li>
+              <li>UIUX 設計</li>
+              <li>ReactJs, NextJs / VueJs, NuxtJs / NodeJs</li>
+              <li>TypeScript, Tailwind CSS</li>
+              <li>Oracle SQL, MySQL</li>
+              <li>Java, Spring boot</li>
               <li>SEO & 性能優化</li>
             </ul>
           </motion.div>
@@ -60,8 +62,9 @@ export default function ServicePage() {
             </p>
             <ul className="list-disc pl-5 text-gray-600">
               <li>Shopify 佈景主題設定與客製化</li>
-              <li>商品上架與金流整合（綠界、PayPal、Apple Pay、信用卡等）</li>
-              <li>行銷工具整合（如 EDM、Google/Facebook）</li>
+              <li>商品上架、分類、選單設定</li>
+              <li>金流整合（綠界、PayPal、Apple Pay、信用卡等），含國外金流整合</li>
+              <li>行銷工具整合（如 Google/Facebook/Instagram）</li>
               <li>後台教學與維護諮詢</li>
             </ul>
           </motion.div>

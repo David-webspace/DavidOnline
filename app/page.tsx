@@ -64,7 +64,7 @@ const HeroSection =() => {
           我叫潘丞詡。畢業於國立陽明交通大學百川學士學位學程，接觸過電機工程、跨領域設計相關課程。熟悉前端網站架設與UIUX流程，目前於國泰金控進行系統全端工程師培訓。
         </p>
         <p className="text-gray-500 mb-4 text-base md:text-lg">
-          我會使用NextJS, ReactJS, VueJS 與 NodeJS等框架建立網站，也有完成RWD的能力，並熟悉使用Shopify來建立電商網站。
+          我會使用NextJS, NuxtJS 等框架建立網站，並熟悉使用Shopify來建立電商網站。
         </p>
         <p className="text-gray-500 mb-6 text-base md:text-lg">
           我很積極，好相處善溝通，懂得如何進行團體合作，並盡力達成團隊的需求。我喜歡學習新的知識，不斷地提升自我能力將會創造更大的價值。若您有外包設計需求，歡迎與我聯絡。

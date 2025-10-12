@@ -12,6 +12,7 @@ const components: Record<string, () => Promise<{ default: React.ComponentType<ob
   chuangchihhui: () => import("../../components/projects/chuangchihhui"),
   synopsyssemiconductorcamp: () => import("../../components/projects/synopsys-semiconductorcamp"),
   sanpany: () => import("../../components/projects/sanpany"),
+  bubbleteawholesalerwa: () => import("../../components/projects/bubbleteawholesalerwa"),
   artisdivoce: () => import("../../components/projects/artisdivoce"),
   nycugraduationrepresentative: () => import("../../components/events/nycu-graduation-representitive"),
   bluegear2023: () => import("../../components/events/bluegear-2023"),
